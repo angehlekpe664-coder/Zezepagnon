@@ -14,27 +14,32 @@ export const Footer = () => {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-800">
           
-          {/* Brand Info & Benin Distributor Details */}
+          {/* Brand Info & Benin Stockiste MAPA Details */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0F62FE] flex items-center justify-center text-white">
-                <ShieldCheck size={24} />
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="bg-[#0F62FE] text-white p-2 rounded-xl">
+                <Shield className="w-5 h-5" />
               </div>
-              <span className="text-2xl font-bold text-white">
-                Zezepagnon <span className="text-[#1FA971]">Bénin</span>
-              </span>
-            </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-tight text-white">
+                  Zezepagnon <span className="text-[#1FA971] text-sm">Bénin</span>
+                </span>
+                <span className="text-[10px] tracking-wider uppercase font-semibold text-gray-400">
+                  Stockiste Agréé MAPA
+                </span>
+              </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-              Représentation et distribution officielle des traitements d'immunothérapie Zezepagnon en République du Bénin. Alliant la richesse de la pharmacopée africaine du Pr Alain Tagro Kalou et le renforcement naturel de la résilience immunitaire.
+              Représentation et gestion officielle des traitements d'immunothérapie Zezepagnon par le Stockiste Agréé MAPA en République du Bénin. Alliant la richesse de la pharmacopée africaine du Pr Alain Tagro Kalou et le renforcement naturel de la résilience immunitaire.
             </p>
             <div className="space-y-2 text-sm text-gray-300 pt-2">
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-[#1FA971]" />
-                <span>Siège Distribution : Abomey-Calavi & Cotonou, Bénin</span>
+                <span>Siège Stockiste MAPA : Abomey-Calavi & Cotonou, Bénin</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-[#1FA971]" />
-                <span>+229 56 54 98 84 / WhatsApp Direct Bénin</span>
+                <span>+229 56 54 98 84 / Stockiste Direct WhatsApp Bénin</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-[#1FA971]" />

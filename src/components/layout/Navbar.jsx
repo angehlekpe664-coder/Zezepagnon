@@ -37,7 +37,7 @@ export const Navbar = () => {
         <div className="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center space-x-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-medium">Distributeur Officiel Bénin</span>
+            <span className="font-medium">Stockiste Officiel MAPA Bénin</span>
             <span className="hidden sm:inline text-white/60">|</span>
             <span className="hidden sm:inline text-blue-100">Livraison Express 24h à Abomey-Calavi & Cotonou</span>
           </div>

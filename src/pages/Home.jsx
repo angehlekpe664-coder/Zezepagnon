@@ -115,7 +115,7 @@ export const Home = () => {
             <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-gray-500 font-medium">
               <div className="flex items-center space-x-2">
                 <CheckCircle2 size={16} className="text-[#1FA971]" />
-                <span>Distribution Agréée Bénin</span>
+                <span>Stockiste Agréé MAPA Bénin</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 size={16} className="text-[#1FA971]" />
@@ -377,6 +377,24 @@ export const Home = () => {
         <FAQAccordion questions={FAQ_DATA[0].questions.concat(FAQ_DATA[1].questions)} />
       </section>
 
+      {/* DEDICATED SECTION: Qu'est-ce qu'un Stockiste MAPA ? */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <div className="glass-card rounded-3xl p-8 md:p-10 bg-gradient-to-br from-[#0F62FE] to-[#003899] text-white shadow-xl">
+          <div className="flex items-center space-x-3 mb-3">
+            <Award className="text-[#7FFABA]" size={24} />
+            <span className="text-xs font-bold text-[#7FFABA] uppercase tracking-wider bg-white/10 px-3.5 py-1.5 rounded-full">
+              CERTIFICATION MAPA BÉNIN UNIQUEMENT
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-white">
+            Qu'est-ce qu'un Stockiste MAPA ?
+          </h2>
+          <p className="text-sm md:text-base text-blue-100 leading-relaxed max-w-4xl">
+            Les stockistes sont des partenaires agréés et certifiés de <strong>MAPA</strong>, ayant suivi une formation et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos produits MAPA en toute sécurité.
+          </p>
+        </div>
+      </section>
+
       {/* Final Action Banner */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="glass-card rounded-3xl p-8 md:p-14 bg-gradient-to-r from-blue-50 via-white to-emerald-50 border border-blue-100 text-center space-y-6 shadow-xl">
@@ -384,7 +402,7 @@ export const Home = () => {
             Prêt à transformer votre santé immunitaire ?
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-            Commandez directement vos tisanes et traitements Zezepagnon auprès du distributeur officiel au Bénin. Profitez d'une livraison rapide à Abomey-Calavi et Cotonou avec paiement Mobile Money ou à la livraison.
+            Commandez directement vos tisanes et traitements Zezepagnon auprès du stockiste agréé MAPA au Bénin. Profitez d'une livraison rapide à Abomey-Calavi et Cotonou avec paiement Mobile Money ou à la livraison.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link

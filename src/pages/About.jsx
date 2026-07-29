@@ -67,7 +67,7 @@ export const About = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <CheckCircle2 size={16} className="text-[#1FA971]" />
-                <span>Réseau de distribution agréé en République du Bénin</span>
+                <span>Réseau de stockistes agréés MAPA en République du Bénin</span>
               </li>
             </ul>
           </div>
@@ -78,6 +78,24 @@ export const About = () => {
               className="w-full h-80 object-cover rounded-2xl shadow-md"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Stockiste MAPA Explanation Card */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <div className="glass-card rounded-3xl p-8 md:p-10 bg-gradient-to-br from-[#0F62FE] to-[#003899] text-white shadow-xl">
+          <div className="flex items-center space-x-3 mb-3">
+            <Award className="text-[#7FFABA]" size={24} />
+            <span className="text-xs font-bold text-[#7FFABA] uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
+              CERTIFICATION MAPA BÉNIN UNIQUEMENT
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-white">
+            Qu'est-ce qu'un Stockiste MAPA ?
+          </h2>
+          <p className="text-sm md:text-base text-blue-100 leading-relaxed max-w-4xl">
+            Les stockistes sont des partenaires agréés et certifiés de <strong>MAPA</strong>, ayant suivi une formation et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos produits MAPA en toute sécurité.
+          </p>
         </div>
       </section>
 
