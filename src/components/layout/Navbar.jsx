@@ -8,7 +8,8 @@ import {
   ShieldCheck, 
   ChevronRight,
   Globe,
-  Sparkles
+  Sparkles,
+  Award
 } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
@@ -32,47 +33,51 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 transition-all duration-300">
-      {/* Top Benin Distribution Bar */}
-      <div className="bg-[#004CCD] text-white text-xs py-1.5 px-4">
+      {/* Top Benin MAPA Certified Distribution Bar */}
+      <div className="bg-gradient-to-r from-[#022C22] via-[#046C4E] to-[#0D9488] text-white text-xs py-2 px-4 shadow-sm">
         <div className="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex items-center space-x-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-medium">Stockiste Officiel MAPA Bénin</span>
-            <span className="hidden sm:inline text-white/60">|</span>
-            <span className="hidden sm:inline text-blue-100">Livraison Express 24h à Abomey-Calavi & Cotonou</span>
+          <div className="flex items-center space-x-2.5">
+            <span className="inline-flex items-center gap-1 bg-[#F59E0B]/20 text-[#FBBF24] border border-[#F59E0B]/40 px-2 py-0.5 rounded-full font-semibold text-[11px]">
+              <Award size={12} className="text-[#FBBF24]" />
+              Stockiste Officiel MAPA
+            </span>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <span className="hidden sm:inline text-emerald-100 font-medium">
+              ⚡ Livraison Express 24h & Paiement Mobile Money (MTN / Moov) à Cotonou & Calavi
+            </span>
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/order-tracking" className="hover:underline flex items-center gap-1 text-white/90 hover:text-white">
-              <Truck size={13} />
-              <span>Suivre un colis</span>
+            <Link to="/order-tracking" className="hover:underline flex items-center gap-1.5 text-emerald-100 hover:text-white transition-colors">
+              <Truck size={13} className="text-[#FBBF24]" />
+              <span className="font-medium">Suivre ma commande</span>
             </Link>
             <button 
               onClick={() => setCurrency(currency === 'XOF' ? 'USD' : 'XOF')}
-              className="flex items-center gap-1 bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded text-[11px] transition-colors"
+              className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 border border-white/15 px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-all"
               title="Changer la devise de paiement"
             >
-              <Globe size={12} />
-              <span className="font-bold">{currency === 'XOF' ? 'FCFA (Bénin 🇧🇯)' : 'USD ($ 🇺🇸)'}</span>
+              <Globe size={12} className="text-emerald-300" />
+              <span>{currency === 'XOF' ? 'FCFA (Bénin 🇧🇯)' : 'USD ($ 🇺🇸)'}</span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Glass Navbar */}
-      <nav className="glass-nav">
+      <nav className="glass-nav border-b border-emerald-900/5">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0F62FE] to-[#1FA971] flex items-center justify-center text-white shadow-lg shadow-[#0F62FE]/20 group-hover:scale-105 transition-transform">
-              <ShieldCheck size={24} className="stroke-[2.2]" />
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#059669] via-[#10B981] to-[#D97706] flex items-center justify-center text-white shadow-lg shadow-[#059669]/25 group-hover:scale-105 transition-transform duration-300">
+              <ShieldCheck size={26} className="stroke-[2.2]" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-bold tracking-tight text-[#0F62FE]">
-                Zezepagnon <span className="text-[#191C1E] font-medium text-lg">Bénin</span>
+              <span className="text-2xl font-black font-heading tracking-tight text-[#0F172A] group-hover:text-[#059669] transition-colors">
+                Zezepagnon <span className="text-[#059669] font-medium text-lg font-sans">Bénin</span>
               </span>
-              <span className="text-[10px] text-gray-500 font-medium tracking-wider uppercase -mt-1">
-                Excellence Immunothérapeutique
+              <span className="text-[10px] text-[#0D9488] font-bold tracking-widest uppercase -mt-1 flex items-center gap-1">
+                <span>STOCKISTE AGRÉÉ MAPA</span>
               </span>
             </div>
           </Link>
@@ -83,10 +88,10 @@ export const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                className={`px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                   isActive(link.path)
-                    ? 'text-[#0F62FE] bg-[#0F62FE]/10 font-semibold'
-                    : 'text-gray-700 hover:text-[#0F62FE] hover:bg-gray-100/60'
+                    ? 'text-[#059669] bg-[#059669]/10 shadow-sm font-bold'
+                    : 'text-[#334155] hover:text-[#059669] hover:bg-[#059669]/5'
                 }`}
               >
                 {link.name}
@@ -94,18 +99,18 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Right Action Icons & Direct Order CTA (NO Login required!) */}
+          {/* Right Action Icons & Direct Order CTA */}
           <div className="flex items-center space-x-3">
             
             {/* Cart Icon */}
             <Link
               to="/cart"
-              className="relative p-2.5 text-gray-700 hover:text-[#0F62FE] hover:bg-white/80 rounded-xl transition-all border border-transparent hover:border-gray-200"
+              className="relative p-2.5 text-[#334155] hover:text-[#059669] hover:bg-emerald-50/80 rounded-2xl transition-all border border-slate-200/60 hover:border-emerald-200"
               title="Panier de commande"
             >
-              <ShoppingBag size={20} />
+              <ShoppingBag size={22} />
               {totalItemsCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#1FA971] text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center animate-bounce shadow-md">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#D97706] text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center animate-bounce shadow-md border-2 border-white">
                   {totalItemsCount}
                 </span>
               )}
@@ -114,16 +119,16 @@ export const Navbar = () => {
             {/* Direct Order Action CTA */}
             <Link
               to="/products"
-              className="hidden sm:flex items-center space-x-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#0F62FE] to-[#004CCD] text-white font-medium text-sm shadow-md hover:shadow-lg hover:shadow-[#0F62FE]/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="hidden sm:flex items-center space-x-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#059669] via-[#046C4E] to-[#0F766E] text-white font-heading font-bold text-sm shadow-lg shadow-[#059669]/25 hover:shadow-xl hover:shadow-[#059669]/35 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
             >
-              <Sparkles size={16} />
+              <Sparkles size={16} className="text-[#FBBF24] animate-pulse" />
               <span>Commander Zezepagnon</span>
             </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-[#0F62FE] focus:outline-none"
+              className="lg:hidden p-2.5 text-[#0F172A] hover:text-[#059669] focus:outline-none rounded-xl hover:bg-emerald-50"
             >
               {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
@@ -132,39 +137,39 @@ export const Navbar = () => {
 
         {/* Mobile Dropdown Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200 px-6 py-6 space-y-3 transition-all animate-fadeIn">
+          <div className="lg:hidden bg-white/95 backdrop-blur-2xl border-b border-emerald-100 px-6 py-6 space-y-3 shadow-2xl transition-all animate-fadeIn">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                className={`flex items-center justify-between px-4 py-3 rounded-2xl text-base font-semibold transition-all ${
                   isActive(link.path)
-                    ? 'text-[#0F62FE] bg-[#0F62FE]/10 font-bold'
-                    : 'text-gray-800 hover:bg-gray-100'
+                    ? 'text-[#059669] bg-[#059669]/10 font-bold'
+                    : 'text-[#1E293B] hover:bg-emerald-50'
                 }`}
               >
                 <span>{link.name}</span>
-                <ChevronRight size={18} className="text-gray-400" />
+                <ChevronRight size={18} className="text-[#059669]" />
               </Link>
             ))}
             
-            <div className="pt-4 border-t border-gray-100 space-y-3">
+            <div className="pt-4 border-t border-slate-100 space-y-3">
               <Link
                 to="/products"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center space-x-2 py-3 rounded-xl bg-[#0F62FE] text-white font-semibold text-center shadow-lg shadow-[#0F62FE]/25"
+                className="w-full flex items-center justify-center space-x-2 py-3.5 rounded-2xl bg-gradient-to-r from-[#059669] to-[#046C4E] text-white font-heading font-bold text-center shadow-lg shadow-[#059669]/30"
               >
-                <Sparkles size={18} />
+                <Sparkles size={18} className="text-[#FBBF24]" />
                 <span>Commander maintenant (Bénin)</span>
               </Link>
               <Link
                 to="/order-tracking"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-gray-100 text-gray-700 font-medium text-center"
+                className="w-full flex items-center justify-center space-x-2 py-3 rounded-2xl bg-emerald-50 text-[#047857] font-semibold text-center border border-emerald-200"
               >
                 <Truck size={18} />
-                <span>Suivre ma livraison</span>
+                <span>Suivre ma commande</span>
               </Link>
             </div>
           </div>
@@ -173,3 +178,4 @@ export const Navbar = () => {
     </header>
   );
 };
+
