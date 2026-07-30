@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { WhatsAppButton } from './components/common/WhatsAppButton';
+import { CellularBackground } from './components/common/CellularBackground';
 import { Toast } from './components/common/Toast';
 
 import { Home } from './pages/Home';
@@ -38,10 +39,11 @@ export function App() {
       <CartProvider>
         <Router>
           <ScrollToTop />
-          <div className="min-h-screen flex flex-col justify-between bg-[#F7F9FC] text-[#191C1E]">
+          <div className="min-h-screen flex flex-col justify-between bg-[#F4F7FB] text-[#0F172A] relative overflow-hidden">
+            <CellularBackground />
             <Navbar />
             <Toast />
-            <main className="flex-grow">
+            <main className="flex-grow z-10 relative">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

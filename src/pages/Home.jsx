@@ -83,55 +83,55 @@ export const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Hero Text */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-teal-500/10 border border-emerald-600/20 px-4 py-2 rounded-full shadow-sm">
-              <Award size={16} className="text-[#D97706]" />
-              <span className="text-xs font-heading font-extrabold uppercase tracking-widest text-[#059669]">
+          <div className="lg:col-span-7 space-y-6 text-left relative z-10">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0F62FE]/15 via-[#6366F1]/15 to-[#10B981]/15 border border-[#0F62FE]/30 px-4 py-2 rounded-full shadow-sm backdrop-blur-md">
+              <Award size={16} className="text-[#0F62FE] animate-bounce-slow" />
+              <span className="text-xs font-heading font-extrabold uppercase tracking-widest text-[#0F62FE]">
                 STOCKISTE AGRÉÉ MAPA BÉNIN
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-slate-900 tracking-tight leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-gray-900 tracking-tight leading-[1.12]">
               L'Avenir de la Santé : <br />
-              <span className="text-gradient-emerald font-display">L'Immunothérapie Zezepagnon</span>
+              <span className="text-gradient-vibrant font-display">L'Immunothérapie Zezepagnon</span>
             </h1>
 
-            <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl font-sans">
-              Issue des recherches scientifiques en microbiologie du Pr. Alain Tagro Kalou, l'immunothérapie Zezepagnon combine la puissance de 10 plantes de la pharmacopée africaine pour régénérer votre système immunitaire au Bénin.
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl font-sans">
+              Issue des recherches scientifiques en microbiologie du Pr. Alain Tagro Kalou, l'immunothérapie Zezepagnon combine la puissance de 10 plantes d'Afrique pour régénérer votre système immunitaire au Bénin.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 to="/products"
-                className="flex items-center space-x-2.5 bg-gradient-to-r from-[#059669] via-[#046C4E] to-[#0F766E] hover:from-[#10B981] hover:to-[#059669] text-white font-heading font-bold px-8 py-4 rounded-2xl shadow-xl shadow-[#059669]/30 hover:scale-[1.03] active:scale-[0.98] transition-all text-base"
+                className="flex items-center space-x-2.5 bg-gradient-to-r from-[#0F62FE] via-[#004CCD] to-[#10B981] hover:from-[#10B981] hover:to-[#0F62FE] text-white font-heading font-bold px-8 py-4 rounded-2xl shadow-xl shadow-[#0F62FE]/30 hover:scale-[1.03] active:scale-[0.98] transition-all text-base"
               >
-                <Sparkles size={18} className="text-[#FBBF24] animate-pulse" />
+                <Sparkles size={18} className="text-[#7FFABA] animate-pulse" />
                 <span>Commander Zezepagnon</span>
                 <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/immunotherapy"
-                className="flex items-center space-x-2 bg-white/90 hover:bg-white text-slate-800 font-heading font-bold px-6 py-4 rounded-2xl border border-emerald-100 shadow-soft hover:shadow-md hover:border-emerald-300 transition-all text-base"
+                className="flex items-center space-x-2 bg-white/90 hover:bg-white text-gray-800 font-heading font-bold px-6 py-4 rounded-2xl border border-blue-100 shadow-soft hover:shadow-md hover:border-[#0F62FE]/30 transition-all text-base"
               >
-                <FileText size={18} className="text-[#059669]" />
+                <FileText size={18} className="text-[#0F62FE]" />
                 <span>La Science Zezepagnon</span>
               </Link>
             </div>
 
             {/* Quick Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-600 font-semibold">
-              <div className="flex items-center space-x-2 bg-white/80 px-3 py-1.5 rounded-xl border border-slate-200/60 shadow-sm">
-                <CheckCircle2 size={16} className="text-[#059669]" />
+            <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-gray-700 font-semibold">
+              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
+                <CheckCircle2 size={16} className="text-[#10B981]" />
                 <span>Stockiste Officiel MAPA Bénin</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/80 px-3 py-1.5 rounded-xl border border-slate-200/60 shadow-sm">
-                <CheckCircle2 size={16} className="text-[#059669]" />
+              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
+                <CheckCircle2 size={16} className="text-[#10B981]" />
                 <span>Paiement MoMo / Moov / Wave</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/80 px-3 py-1.5 rounded-xl border border-slate-200/60 shadow-sm">
-                <CheckCircle2 size={16} className="text-[#059669]" />
+              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
+                <CheckCircle2 size={16} className="text-[#10B981]" />
                 <span>Livraison 24h Cotonou & Calavi</span>
               </div>
             </div>

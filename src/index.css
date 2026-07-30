@@ -4,9 +4,9 @@
 
 @layer base {
   body {
-    background-color: #F8FAF9;
+    background-color: #F4F7FB;
     color: #0F172A;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     overflow-x: hidden;
   }
 
@@ -24,10 +24,10 @@
   /* Modern Glassmorphism System */
   .glass-card {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 10px 30px -5px rgba(5, 150, 105, 0.05);
+    box-shadow: 0 10px 30px -5px rgba(15, 98, 254, 0.05);
   }
 
   .glass-card-hover {
@@ -35,8 +35,8 @@
   }
   .glass-card-hover:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 45px -10px rgba(5, 150, 105, 0.15);
-    border-color: rgba(5, 150, 105, 0.3);
+    box-shadow: 0 20px 45px -10px rgba(15, 98, 254, 0.15);
+    border-color: rgba(15, 98, 254, 0.3);
   }
 
   .glass-nav {
@@ -53,15 +53,21 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Gradient Text Variants */
+  /* Vibrant Gradient Text Variants */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #0F62FE 0%, #004CCD 50%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-gradient-emerald {
-    background: linear-gradient(135deg, #059669 0%, #046C4E 100%);
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-vibrant {
-    background: linear-gradient(135deg, #10B981 0%, #0D9488 50%, #2563EB 100%);
+    background: linear-gradient(135deg, #0F62FE 0%, #6366F1 50%, #10B981 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -92,40 +98,62 @@
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #059669;
-  }
-
-  /* Decorative Badge Utilities */
-  .badge-mapa {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.15) 100%);
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    color: #B45309;
-  }
-
-  .badge-emerald {
-    background: rgba(5, 150, 105, 0.1);
-    border: 1px solid rgba(5, 150, 105, 0.25);
-    color: #047857;
+    background: #0F62FE;
   }
 }
 
-/* Custom Keyframe Animations */
-@keyframes float {
+/* Custom Keyframe Animations for UI/UX Motion Design */
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes reverseSpinSlow {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes bounceSlow {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
-.animate-float {
-  animation: float 5s ease-in-out infinite;
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.08); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.35; filter: blur(24px); }
-  50% { opacity: 0.75; filter: blur(36px); }
+.animate-spin-slow {
+  animation: spinSlow 25s linear infinite;
 }
 
-.animate-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
+.animate-reverse-spin-slow {
+  animation: reverseSpinSlow 30s linear infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 4s ease-in-out infinite;
+}
+
+.animate-bounce-medium {
+  animation: bounceSlow 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+.animate-pulse-medium {
+  animation: pulseSlow 5s ease-in-out infinite;
 }
 
 @keyframes shimmer {
