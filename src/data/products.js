@@ -1,227 +1,337 @@
 export const PRODUCTS = [
   {
-    id: "diabete-specialise-grand",
-    name: "Zezepagnon Diabète Spécialisé Grand",
-    subtitle: "Formule naturelle pour la régulation de la glycémie - Grand Format (150g)",
-    category: "Spécialisé",
-    priceUSD: 85.00,
-    priceXOF: 50000,
+    id: "cacao-booster-oxygen",
+    name: "Cacao Booster Oxygen",
+    subtitle: "Oxygénation cellulaire & Stimulation globale",
+    category: "Énergisant",
+    priceUSD: 35.00,
+    priceXOF: 20000,
     rating: 4.9,
-    reviewsCount: 1240,
-    isBestSeller: true,
-    isNew: false,
-    images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.07.jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.09.jpeg"
-    ],
-    shortDescription: "Zezepagnon Diabète Spécialisé grand est une formule conçue pour aider à maintenir une glycémie équilibrée et soutenir la régulation des personnes atteintes de diabète.",
-    fullDescription: "Zezepagnon Diabète Spécialisé grand est une formule conçue pour aider à maintenir une glycémie équilibrée et soutenir la régulation des personnes atteintes de diabète. Ce mélange d'herbes naturelles et d'ingrédients soigneusement sélectionnés, peut contribuer à réguler le sucre dans le sang et favoriser une meilleure santé.",
-    bioactiveIngredients: [
-      { name: "Moringa Oleifera Purifié", desc: "Favorise la régulation naturelle de l'insuline et soutient la santé pancréatique." },
-      { name: "Plantes Pharmacopée Africaine (10 Plantes)", desc: "Mélange synergique traditionnel 100% naturel pour réguler le taux de sucre." }
-    ],
-    protocolGuidelines: {
-      dailyDose: "1 à 2 tasses par jour",
-      optimalTime: "Matin et Soir",
-      cycleLength: "30 à 90 Jours",
-      instructions: "Laisser infuser une cuillère à soupe dans 250ml d'eau chaude pendant 10 minutes. Boire tiède."
-    },
-    benefits: [
-      "Maintien d'une glycémie équilibrée et contrôle du sucre",
-      "Soutien naturel pour les personnes atteintes de diabète",
-      "Formule 100% naturelle sans additifs chimiques",
-      "Fabriqué selon les recherches du Pr. Alain Tagro Kalou"
-    ],
-    labData: {
-      satisfactionRate: "98%",
-      markerPrecision: "95%",
-      clinicalRegistryRef: "HOMOLOGATION MAPA - DIABÈTE BÉNIN 2026"
-    }
-  },
-  {
-    id: "sommeil-reparateur",
-    name: "Zezepagnon Sommeil Réparateur",
-    subtitle: "Tisane naturelle pour un sommeil profond et réparateur",
-    category: "Entretien",
-    priceUSD: 45.00,
-    priceXOF: 25000,
-    rating: 5.0,
-    reviewsCount: 890,
-    isBestSeller: true,
-    isNew: false,
-    images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.0.jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15..jpeg"
-    ],
-    shortDescription: "Tisane naturelle pour un sommeil profond et réparateur. Sans accoutumance.",
-    fullDescription: "La tisane Zezepagnon Sommeil Réparateur favorise l'apaisement du système nerveux, réduit le stress et l'anxiété et permet un sommeil naturel, réparateur et profond sans provoquer de dépendance ou d'accoutumance.",
-    bioactiveIngredients: [
-      { name: "Extraits Apaisants Traditionnels", desc: "Favorisent la relaxation musculaire et nerveuse avant le coucher." }
-    ],
-    protocolGuidelines: {
-      dailyDose: "1 tasse",
-      optimalTime: "30 minutes avant le coucher",
-      cycleLength: "21 Jours",
-      instructions: "Infuser dans de l'eau tiède/chaude et consommer le soir."
-    },
-    benefits: [
-      "Sommeil paisible, profond et réparateur",
-      "Formule 100% naturelle sans accoutumance",
-      "Réduction du stress et de la nervosité"
-    ],
-    labData: {
-      satisfactionRate: "99%",
-      markerPrecision: "96%",
-      clinicalRegistryRef: "RAPPORT DE TEST BIEN-ÊTRE MAPA"
-    }
-  },
-  {
-    id: "tisane-antibiotique-grand",
-    name: "Zezepagnon Tisane Antibiotique Grand Format",
-    subtitle: "Immunothérapie puissante à base de 10 plantes africaines (150g)",
-    category: "Concentré",
-    priceUSD: 95.00,
-    priceXOF: 60000,
-    rating: 4.9,
-    reviewsCount: 1540,
+    reviewsCount: 420,
     isBestSeller: true,
     isNew: true,
     images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15..jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.10.jpeg"
+      "/img/img/p1.jpeg",
+      "/img/img/p3.jpeg"
     ],
-    shortDescription: "Immunothérapie puissante à base de 10 plantes africaines. Traitement intensif pour renforcer vos défenses naturelles.",
-    fullDescription: "Zezepagnon Tisane Antibiotique Grand Format est un concentré d'immunothérapie naturelle élaboré par le Pr Alain Tagro Kalou. Utilisant la synergie de 10 plantes sélectionnées dans la pharmacopée africaine, cette tisane offre une protection antibactérienne, antivirale et un renforcement profond du système de défense immunitaire.",
+    shortDescription: "Cacao Booster Oxygen : Formule naturelle d'oxygénation cellulaire et de stimulation globale de l'organisme Zezepagnon.",
+    fullDescription: "Zezepagnon Cacao Booster Oxygen est une formule innovante conçue pour favoriser l'oxygénation des cellules, améliorer la circulation sanguine et stimuler la vitalité globale. Riche en principes actifs botaniques et cacao pur.",
     bioactiveIngredients: [
-      { name: "Synergie de 10 Plantes Africaines", desc: "Sélectionnées pour leurs propriétés antibiotiques et régénératrices." }
-    ],
-    protocolGuidelines: {
-      dailyDose: "2 tasses par jour",
-      optimalTime: "Matin et Soir",
-      cycleLength: "30 Jours",
-      instructions: "Faire bouillir ou infuser 10-15 minutes et boire chaud ou tiède."
-    },
-    benefits: [
-      "Renforcement puissant des défenses immunitaires",
-      "Action antibactérienne et antivirale naturelle",
-      "Nettoyage et élimination des toxines de l'organisme"
-    ],
-    labData: {
-      satisfactionRate: "99%",
-      markerPrecision: "97%",
-      clinicalRegistryRef: "ESSAI CLINIQUE PLANTE PHARMACOPEE"
-    }
-  },
-  {
-    id: "cacao-bangala",
-    name: "Zezepagnon Cacao Bangala",
-    subtitle: "Le cacao énergisant au service de votre bien-être",
-    category: "Entretien",
-    priceUSD: 50.00,
-    priceXOF: 30000,
-    rating: 4.8,
-    reviewsCount: 610,
-    isBestSeller: false,
-    isNew: true,
-    images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.08.jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.0.jpeg"
-    ],
-    shortDescription: "Le cacao énergisant au service de votre bien-être. Enrichi en cacao, reconnu pour sa richesse nutritionnelle.",
-    fullDescription: "Enrichi en cacao pur et plantes tonifiantes africaines, Zezepagnon Cacao Bangala apporte énergie, vigueur et vitalité au quotidien. Il aide à lutter contre la fatigue physique et intellectuelle.",
-    bioactiveIngredients: [
-      { name: "Cacao Pur Sélectionné", desc: "Riche en antioxydants, magnésium et stimulants naturels." },
-      { name: "Tonifiants Végétaux Africains", desc: "Soutiennent la vitalité et la résistance à l'effort." }
+      { name: "Cacao Pur Oxygénant", desc: "Favorise la micro-circulation et l'apport d'oxygène au cerveau et muscles." },
+      { name: "Plantes Stimulantes Africaines", desc: "Accroissent la résistance à la fatigue et la clarté mentale." }
     ],
     protocolGuidelines: {
       dailyDose: "1 tasse par jour",
       optimalTime: "Le matin au petit-déjeuner",
       cycleLength: "Consommation quotidienne",
-      instructions: "Mélanger une cuillère dans une tasse d'eau chaude ou de lait chaud."
+      instructions: "Infuser une cuillère dans 250ml d'eau chaude ou tiède."
     },
     benefits: [
-      "Gain d'énergie et de tonus naturel immédiat",
-      "Riche en antioxydants protecteurs",
-      "Goût agréable et stimulant"
+      "Oxygénation optimale des cellules et tissus",
+      "Gain d'énergie et réduction de la fatigue",
+      "Formule 100% naturelle certifiée MAPA"
     ],
     labData: {
-      satisfactionRate: "97%",
-      markerPrecision: "93%",
-      clinicalRegistryRef: "ZEZEPAGNON TONUS BENIN"
+      satisfactionRate: "98%",
+      markerPrecision: "95%",
+      clinicalRegistryRef: "DOSSIER CACAO OXYGEN BÉNIN 2026"
     }
   },
   {
-    id: "diabete-specialise-petit",
-    name: "Zezepagnon Diabète Spécialisé Petit",
-    subtitle: "Thé composé de 10 plantes naturelles pour la régulation de la glycémie (50g)",
-    category: "Spécialisé",
-    priceUSD: 50.00,
-    priceXOF: 30000,
-    rating: 4.8,
-    reviewsCount: 430,
-    isBestSeller: false,
+    id: "cacao-bangala",
+    name: "Cacao Bangala",
+    subtitle: "Le cacao tonifiant au service de votre bien-être et de votre tonus",
+    category: "Vitalité & Tonus",
+    priceUSD: 35.00,
+    priceXOF: 20000,
+    rating: 5.0,
+    reviewsCount: 650,
+    isBestSeller: true,
     isNew: false,
     images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.09.jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.07.jpeg"
+      "/img/img/p2.jpeg",
+      "/img/img/p1.jpeg"
     ],
-    shortDescription: "Zezepagnon DIABETE SPECIALISE est un thé composé de dix plantes naturelles qui favorisent votre santé.",
-    fullDescription: "Format individuel du traitement Zezepagnon Diabète Spécialisé. Composé de dix plantes naturelles soigneusement dosées pour stabiliser le taux de sucre sanguin et soutenir la vitalité des personnes diabétiques.",
+    shortDescription: "Cacao Bangala : Le cacao énergisant au service de votre bien-être. Apporte vigueur et résistance au quotidien.",
+    fullDescription: "Formulé à partir de cacao pur sélectionné et d'extraits tonifiants de la pharmacopée africaine, Zezepagnon Cacao Bangala renforce la vigueur, soutient les performances physiques et dynamise l'organisme.",
     bioactiveIngredients: [
-      { name: "Complex 10 Plantes Glycémie", desc: "Soutient la sensibilité à l'insuline et l'équilibre glycémique." }
+      { name: "Cacao Pur & Antioxydants", desc: "Protection cellulaire et apport en magnésium naturel." },
+      { name: "Actifs Tonifiants Végétaux", desc: "Stimulent la résistance et le tonus physique." }
     ],
     protocolGuidelines: {
       dailyDose: "1 tasse par jour",
       optimalTime: "Le matin",
-      cycleLength: "30 Jours",
-      instructions: "Infuser un sachet ou une cuillère dans l'eau chaude."
+      cycleLength: "Cure de 30 Jours",
+      instructions: "Mélanger dans de l'eau chaude et consommer tiède."
     },
     benefits: [
-      "Régulation douce et continue du taux de sucre",
-      "Format pratique et économique",
-      "Produit 100% naturel certifié"
+      "Vitalité et puissance énergétique naturelle",
+      "Soutien de la forme physique et intellectuelle",
+      "Produit certifié par Stockiste MAPA Bénin"
     ],
     labData: {
-      satisfactionRate: "96%",
-      markerPrecision: "92%",
-      clinicalRegistryRef: "MINI CURE DIABETE MAPA"
+      satisfactionRate: "99%",
+      markerPrecision: "96%",
+      clinicalRegistryRef: "RÉFÉRENCE TONUS MAPA BÉNIN"
     }
   },
   {
-    id: "tisane-antibiotique-petit",
-    name: "Zezepagnon Tisane Antibiotique Petit Format",
-    subtitle: "Immunothérapie naturelle au format individuel (50g)",
-    category: "Concentré",
-    priceUSD: 55.00,
-    priceXOF: 35000,
-    rating: 4.9,
-    reviewsCount: 520,
+    id: "sachet-cacao-booster",
+    name: "Sachet Cacao Booster",
+    subtitle: "Format individuel pratique pour une énergie instantanée",
+    category: "Format Pratique",
+    priceUSD: 4.00,
+    priceXOF: 2000,
+    rating: 4.8,
+    reviewsCount: 890,
     isBestSeller: false,
     isNew: true,
     images: [
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15.10.jpeg",
-      "/img/img/WhatsApp Image 2026-07-28 at 12.15..jpeg"
+      "/img/img/p3.jpeg",
+      "/img/img/p1.jpeg"
     ],
-    shortDescription: "Format compact de la Tisane Antibiotique Zezepagnon aux 10 plantes de la pharmacopée africaine.",
-    fullDescription: "Format pratique de 50g de la formule antibiotique Zezepagnon. Idéal pour débuter le traitement ou pour emporter lors de vos déplacements.",
+    shortDescription: "Sachet Cacao Booster : Format individuel pratique pour une dose instantanée d'énergie et de vitalité.",
+    fullDescription: "Ce sachet dose unique du Cacao Booster vous permet d'emporter votre dose quotidienne de vitalité partout avec vous au Bénin. Idéal pour une consommation ponctuelle ou pour découvrir le produit.",
     bioactiveIngredients: [
-      { name: "Extraits Concentrés 10 Plantes", desc: "Action antibactérienne et renforcement immunitaire." }
+      { name: "Concentré Cacao Booster", desc: "Formule de stimulation rapide en sachet individuel." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "1 sachet par besoin",
+      optimalTime: "À tout moment de la journée",
+      cycleLength: "Utilisation à la demande",
+      instructions: "Diluer le contenu du sachet dans une tasse d'eau chaude."
+    },
+    benefits: [
+      "Format nomade hyper pratique",
+      "Effet coup de fouet naturel immédiat",
+      "Prix très accessible"
+    ],
+    labData: {
+      satisfactionRate: "97%",
+      markerPrecision: "93%",
+      clinicalRegistryRef: "DOSAGE NOMADE MAPA BÉNIN"
+    }
+  },
+  {
+    id: "tisane-specialise-petit",
+    name: "Tisane Spécialisée Petit",
+    subtitle: "Immunothérapie naturelle concentrée à base de 10 plantes africaines",
+    category: "Immunothérapie",
+    priceUSD: 125.00,
+    priceXOF: 75000,
+    rating: 4.9,
+    reviewsCount: 1120,
+    isBestSeller: true,
+    isNew: false,
+    images: [
+      "/img/img/p4.jpeg",
+      "/img/img/p5.jpeg"
+    ],
+    shortDescription: "Tisane Spécialisée Petit : Immunothérapie naturelle aux 10 plantes pour renforcer le système immunitaire.",
+    fullDescription: "Zezepagnon Tisane Spécialisée Petit est un concentré d'immunothérapie naturelle élaboré selon les recherches du Pr. Alain TAGRO et Pr. Richard SAWADOGO. Sa formule aux 10 plantes régénère les défenses immunitaires et nettoie l'organisme.",
+    bioactiveIngredients: [
+      { name: "Synergie 10 Plantes Africaines", desc: "Propriétés antibactériennes, antivirales et régénératrices." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "1 à 2 tasses par jour",
+      optimalTime: "Matin et Soir",
+      cycleLength: "30 Jours",
+      instructions: "Infuser 10 minutes dans l'eau bouillante et boire tiède."
+    },
+    benefits: [
+      "Renforcement profond de l'immunité",
+      "Protection antivirale et antibactérienne",
+      "Qualité certifiée par les laboratoires de Chicago"
+    ],
+    labData: {
+      satisfactionRate: "99%",
+      markerPrecision: "97%",
+      clinicalRegistryRef: "IMMUNOTHÉRAPIE PETIT DOSAGE MAPA"
+    }
+  },
+  {
+    id: "tisane-specialise-grand",
+    name: "Tisane Spécialisée Grand",
+    subtitle: "Grand traitement d'immunothérapie pour la régénération cellulaire globale",
+    category: "Immunothérapie Grand Traitement",
+    priceUSD: 500.00,
+    priceXOF: 300000,
+    rating: 5.0,
+    reviewsCount: 2300,
+    isBestSeller: true,
+    isNew: true,
+    images: [
+      "/img/img/p5.jpeg",
+      "/img/img/p4.jpeg"
+    ],
+    shortDescription: "Tisane Spécialisée Grand : Le grand traitement complet d'immunothérapie Zezepagnon pour une guérison et régénération en profondeur.",
+    fullDescription: "Ce grand traitement complet d'immunothérapie Zezepagnon est la cure de référence pour les pathologies sévères ou chroniques. Il régénère le système immunitaire et combat les infections du sang et déséquilibres organiques.",
+    bioactiveIngredients: [
+      { name: "Complexe Botanique Majeur 10 Plantes", desc: "Dosage maximal pour une action thérapeutique complète." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "2 tasses par jour",
+      optimalTime: "Matin et Soir",
+      cycleLength: "60 à 90 Jours",
+      instructions: "Faire bouillir une mesure et laisser infuser avant de consommer."
+    },
+    benefits: [
+      "Action complète de régénération immunitaire",
+      "Traitement de fond pour affections chroniques",
+      "Suivi personnalisé par l'Ambassadeur M. BIAOU"
+    ],
+    labData: {
+      satisfactionRate: "100%",
+      markerPrecision: "99%",
+      clinicalRegistryRef: "GRAND TRAITEMENT IMMUNITÉ BÉNIN"
+    }
+  },
+  {
+    id: "diabete-specialise-petit",
+    name: "Diabète Spécialisé Petit",
+    subtitle: "Formule naturelle pour l'équilibre glycémique et le suivi du diabète",
+    category: "Régulation Glycémique",
+    priceUSD: 125.00,
+    priceXOF: 75000,
+    rating: 4.9,
+    reviewsCount: 940,
+    isBestSeller: false,
+    isNew: false,
+    images: [
+      "/img/img/p6.jpeg",
+      "/img/img/p7.jpeg"
+    ],
+    shortDescription: "Diabète Spécialisé Petit : Formule naturelle d'Afrique spécifiquement dosée pour stabiliser la glycémie.",
+    fullDescription: "Formule botanique spécialisée composée de 10 plantes médicinales pour réguler le taux de sucre dans le sang, soutenir la fonction pancréatique et prévenir les complications du diabète.",
+    bioactiveIngredients: [
+      { name: "Extraits Régulateurs de Glycémie", desc: "Améliorent la sensibilité à l'insuline et équilibrent le sucre sanguin." }
     ],
     protocolGuidelines: {
       dailyDose: "1 tasse par jour",
-      optimalTime: "Le matin ou le soir",
-      cycleLength: "15 Jours",
-      instructions: "Infuser une cuillère à café dans de l'eau chaude pendant 10 minutes."
+      optimalTime: "Le matin avant le repas",
+      cycleLength: "30 Jours",
+      instructions: "Infuser dans de l'eau bien chaude pendant 10 minutes."
     },
     benefits: [
-      "Format pratique et accessible",
-      "Protection antivirale et antibactérienne",
-      "100% naturel certifié par MAPA"
+      "Stabilisation du taux de sucre sanguin",
+      "Protection du pancréas et du système vasculaire",
+      "Formule 100% naturelle sans effets secondaires"
     ],
     labData: {
       satisfactionRate: "98%",
-      markerPrecision: "94%",
-      clinicalRegistryRef: "DOSAGE COMPACT MAPA"
+      markerPrecision: "95%",
+      clinicalRegistryRef: "DOSSIER GLYCÉMIE PETIT MAPA"
+    }
+  },
+  {
+    id: "diabete-specialise-grand",
+    name: "Diabète Spécialisé Grand",
+    subtitle: "Grand traitement intensif pour la régulation de la glycémie et du diabète",
+    category: "Régulation Glycémique Grand Traitement",
+    priceUSD: 500.00,
+    priceXOF: 300000,
+    rating: 5.0,
+    reviewsCount: 1870,
+    isBestSeller: true,
+    isNew: false,
+    images: [
+      "/img/img/p7.jpeg",
+      "/img/img/p6.jpeg"
+    ],
+    shortDescription: "Diabète Spécialisé Grand : Le grand traitement intensif pour réguler durablement le diabète et assainir le sang.",
+    fullDescription: "Considéré comme l'une des cures les plus efficaces contre le diabète au Bénin, ce grand traitement restaure l'équilibre glycémique, protège les organes vitaux et régénère les vaisseaux sanguins.",
+    bioactiveIngredients: [
+      { name: "Formule Glycémique Haute Concentration", desc: "Action en profondeur sur l'insulino-résistance et la glycémie." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "2 tasses par jour",
+      optimalTime: "Matin et Soir",
+      cycleLength: "60 à 90 Jours",
+      instructions: "Préparer en décoction selon les conseils du stockiste."
+    },
+    benefits: [
+      "Régulation durable et puissante du diabète",
+      "Nettoyage sanguin et vascularisation renforcée",
+      "Accompagnement et conseils par l'Ambassadeur MAPA"
+    ],
+    labData: {
+      satisfactionRate: "99%",
+      markerPrecision: "98%",
+      clinicalRegistryRef: "GRAND DOSSIER DIABÈTE BÉNIN"
+    }
+  },
+  {
+    id: "sommeil-reparateur",
+    name: "Sommeil Réparateur",
+    subtitle: "Tisane naturelle pour un sommeil profond, paisible et apaisé",
+    category: "Bien-être & Sommeil",
+    priceUSD: 35.00,
+    priceXOF: 20000,
+    rating: 5.0,
+    reviewsCount: 780,
+    isBestSeller: true,
+    isNew: false,
+    images: [
+      "/img/img/p8.jpeg",
+      "/img/img/p1.jpeg"
+    ],
+    shortDescription: "Sommeil Réparateur : Tisane apaisante naturelle pour retrouver un sommeil réparateur sans accoutumance.",
+    fullDescription: "La tisane Zezepagnon Sommeil Réparateur apaise le système nerveux, libère les tensions accumulées pendant la journée et favorise un sommeil profond, réparateur et naturel.",
+    bioactiveIngredients: [
+      { name: "Plantes Relaxantes Africaines", desc: "Calment le système nerveux et facilitent l'endormissement." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "1 tasse",
+      optimalTime: "30 minutes avant le coucher",
+      cycleLength: "Utilisation régulière",
+      instructions: "Infuser dans une tasse d'eau chaude et consommer tiède."
+    },
+    benefits: [
+      "Endormissement rapide et sommeil paisible",
+      "Réduction du stress et de l'anxiété",
+      "Formule 100% naturelle sans aucune dépendance"
+    ],
+    labData: {
+      satisfactionRate: "99%",
+      markerPrecision: "96%",
+      clinicalRegistryRef: "ESSAI SOMMEIL PAISIBLE MAPA"
+    }
+  },
+  {
+    id: "argile-miracle",
+    name: "Argile Miracle",
+    subtitle: "Formule purifiante à l'argile naturelle pour la détoxification profonde",
+    category: "Purification & Détox",
+    priceUSD: 85.00,
+    priceXOF: 50000,
+    rating: 4.9,
+    reviewsCount: 510,
+    isBestSeller: false,
+    isNew: true,
+    images: [
+      "/img/img/p9.jpeg",
+      "/img/img/p1.jpeg"
+    ],
+    shortDescription: "Argile Miracle : Formule purifiante à l'argile naturelle pour la détoxification et la revitalisation globale.",
+    fullDescription: "Zezepagnon Argile Miracle est un soin purifiant d'exception qui capte les toxines, rééquilibre les métaux lourds et favorise l'assainissement digestif et cellulaire.",
+    bioactiveIngredients: [
+      { name: "Argile Purifiée Bio-Active", desc: "Propriétés absorbantes et purifiantes exceptionnelles." }
+    ],
+    protocolGuidelines: {
+      dailyDose: "1 cuillère diluée",
+      optimalTime: "Le matin à jeun",
+      cycleLength: "Cure de 14 à 21 Jours",
+      instructions: "Laisser reposer l'argile dans un verre d'eau puis boire l'eau d'argile."
+    },
+    benefits: [
+      "Détoxification profonde et élimination des toxines",
+      "Assainissement de la flore intestinale et du sang",
+      "Produit naturel hautement bienfaisant"
+    ],
+    labData: {
+      satisfactionRate: "98%",
+      markerPrecision: "95%",
+      clinicalRegistryRef: "RÉFÉRENTIEL DÉTOX ARGILE MAPA"
     }
   }
 ];

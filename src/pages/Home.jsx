@@ -25,29 +25,29 @@ import { TESTIMONIALS } from '../data/testimonials';
 
 const HERO_CAROUSEL = [
   {
-    url: "/img/img/WhatsApp Image 2026-07-28 at 12.15.07.jpeg",
-    title: "Zezepagnon Diabète Spécialisé Grand",
-    desc: "Formule naturelle pour la régulation de la glycémie"
+    url: "/img/img/p5.jpeg",
+    title: "Tisane Spécialisée Grand",
+    desc: "300 000 CFA - Grand Traitement d'Immunothérapie Complexe 10 Plantes"
   },
   {
-    url: "/img/img/WhatsApp Image 2026-07-28 at 12.15.0.jpeg",
-    title: "Zezepagnon Sommeil Réparateur",
-    desc: "Tisane naturelle pour un sommeil profond et apaisé"
+    url: "/img/img/p7.jpeg",
+    title: "Diabète Spécialisé Grand",
+    desc: "300 000 CFA - Traitement Intensif pour la Régulation Glycémique"
   },
   {
-    url: "/img/img/WhatsApp Image 2026-07-28 at 12.15..jpeg",
-    title: "Zezepagnon Tisane Antibiotique Grand Format",
-    desc: "Immunothérapie puissante à base de 10 plantes africaines"
+    url: "/img/img/p1.jpeg",
+    title: "Cacao Booster Oxygen",
+    desc: "20 000 CFA - Oxygénation Cellulaire & Stimulation Globale"
   },
   {
-    url: "/img/img/WhatsApp Image 2026-07-28 at 12.15.08.jpeg",
-    title: "Zezepagnon Cacao Bangala",
-    desc: "Le cacao énergisant au service de votre bien-être"
+    url: "/img/img/p2.jpeg",
+    title: "Cacao Bangala",
+    desc: "20 000 CFA - Le Cacao Tonifiant au service de votre bien-être"
   },
   {
-    url: "/img/img/WhatsApp Image 2026-07-28 at 12.15.09.jpeg",
-    title: "Zezepagnon Diabète Spécialisé Petit",
-    desc: "Format pratique de 10 plantes pour l'équilibre glycémique"
+    url: "/img/img/p9.jpeg",
+    title: "Argile Miracle",
+    desc: "50 000 CFA - Formule Purifiante & Détoxification Profonde"
   }
 ];
 
