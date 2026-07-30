@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumbs } from '../components/layout/Breadcrumbs';
 import { ShieldCheck, Award, Users, Globe, Building2, CheckCircle2 } from 'lucide-react';
 import { DOCTORS } from '../data/doctors';
+import { StockisteProfileCard } from '../components/common/StockisteProfileCard';
 
 export const About = () => {
   return (
@@ -81,20 +82,25 @@ export const About = () => {
         </div>
       </section>
 
+      {/* Ambassadeur & Stockiste Profile Section */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <StockisteProfileCard />
+      </section>
+
       {/* Stockiste MAPA Explanation Card */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
-        <div className="glass-card rounded-3xl p-8 md:p-10 bg-gradient-to-br from-[#0F62FE] to-[#003899] text-white shadow-xl">
+        <div className="rounded-3xl p-8 md:p-10 bg-gradient-to-br from-[#0F172A] via-[#0F62FE] to-[#004CCD] text-white shadow-2xl border border-blue-400/30 backdrop-blur-xl relative overflow-hidden">
           <div className="flex items-center space-x-3 mb-3">
-            <Award className="text-[#7FFABA]" size={24} />
-            <span className="text-xs font-bold text-[#7FFABA] uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
+            <Award className="text-[#FBBF24]" size={24} />
+            <span className="text-xs font-bold text-[#FBBF24] uppercase tracking-wider bg-amber-500/20 border border-amber-500/40 px-3 py-1 rounded-full">
               CERTIFICATION MAPA BÉNIN UNIQUEMENT
             </span>
           </div>
           <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-white">
             Qu'est-ce qu'un Stockiste MAPA ?
           </h2>
-          <p className="text-sm md:text-base text-blue-100 leading-relaxed max-w-4xl">
-            Les stockistes sont des partenaires agréés et certifiés de <strong>MAPA</strong>, ayant suivi une formation et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos produits MAPA en toute sécurité.
+          <p className="text-sm md:text-base text-blue-50 leading-relaxed max-w-4xl font-medium">
+            Les stockistes sont des partenaires agréés et certifiés de <strong className="text-white font-bold underline decoration-[#FBBF24]">MAPA</strong>, ayant suivi une formation et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos produits MAPA en toute sécurité.
           </p>
         </div>
       </section>

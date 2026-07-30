@@ -17,6 +17,7 @@ import { ProductCard } from '../components/common/ProductCard';
 import { DoctorProfileCard } from '../components/common/DoctorProfileCard';
 import { FAQAccordion } from '../components/common/FAQAccordion';
 import { TestimonialCard, VideoTestimonialModal } from '../components/common/TestimonialCard';
+import { StockisteProfileCard } from '../components/common/StockisteProfileCard';
 import { PRODUCTS } from '../data/products';
 import { DOCTORS } from '../data/doctors';
 import { FAQ_DATA } from '../data/faqData';
@@ -397,20 +398,25 @@ export const Home = () => {
         <FAQAccordion questions={FAQ_DATA[0].questions.concat(FAQ_DATA[1].questions)} />
       </section>
 
+      {/* Ambassadeur & Stockiste Profile Section */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <StockisteProfileCard />
+      </section>
+
       {/* DEDICATED SECTION: Qu'est-ce qu'un Stockiste MAPA ? */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
-        <div className="glass-card rounded-3xl p-8 md:p-12 bg-gradient-to-br from-[#064E3B] via-[#046C4E] to-[#022C22] text-white shadow-2xl border border-emerald-500/20">
+        <div className="rounded-3xl p-8 md:p-12 bg-gradient-to-br from-[#0F172A] via-[#0F62FE] to-[#004CCD] text-white shadow-2xl border border-blue-400/30 backdrop-blur-xl relative overflow-hidden">
           <div className="flex items-center space-x-3 mb-4">
             <Award className="text-[#FBBF24]" size={28} />
-            <span className="text-xs font-heading font-bold text-[#FBBF24] uppercase tracking-widest bg-amber-500/20 border border-amber-500/30 px-4 py-1.5 rounded-full">
+            <span className="text-xs font-heading font-extrabold text-[#FBBF24] uppercase tracking-widest bg-amber-500/20 border border-amber-500/40 px-4 py-1.5 rounded-full backdrop-blur-md">
               CERTIFICATION AGRÉÉE MAPA BÉNIN
             </span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-heading font-extrabold mb-4 text-white">
+          <h2 className="text-2xl md:text-3xl font-heading font-extrabold mb-4 text-white drop-shadow-sm">
             Qu'est-ce qu'un Stockiste MAPA ?
           </h2>
-          <p className="text-sm md:text-base text-emerald-100 leading-relaxed max-w-4xl font-sans">
-            Les stockistes sont des partenaires agréés et certifiés de <strong>MAPA</strong>, ayant suivi une formation rigoureuse et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos traitements Zezepagnon en toute sécurité.
+          <p className="text-sm md:text-base text-blue-50 leading-relaxed max-w-4xl font-sans font-medium">
+            Les stockistes sont des partenaires agréés et certifiés de <strong className="text-white font-bold underline decoration-[#FBBF24]">MAPA</strong>, ayant suivi une formation rigoureuse et obtenu leur certification à travers l'acquisition du ticket d'engagement. Ce statut leur confère le droit exclusif de gérer et de distribuer l'ensemble des produits MAPA au Bénin. Vous pouvez les contacter directement pour commander vos traitements Zezepagnon en toute sécurité.
           </p>
         </div>
       </section>
