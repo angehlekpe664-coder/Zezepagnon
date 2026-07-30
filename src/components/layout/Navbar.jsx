@@ -67,17 +67,25 @@ export const Navbar = () => {
       <nav className="glass-nav border-b border-emerald-900/5">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           
-          {/* Logo */}
+          {/* Logo MAPA */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#059669] via-[#10B981] to-[#D97706] flex items-center justify-center text-white shadow-lg shadow-[#059669]/25 group-hover:scale-105 transition-transform duration-300">
-              <ShieldCheck size={26} className="stroke-[2.2]" />
+            <div className="relative">
+              <img 
+                src="/img/logo.jpeg" 
+                alt="Logo MAPA Atlanta-USA" 
+                className="w-12 h-12 rounded-xl object-contain bg-white p-1 border border-blue-200 shadow-md group-hover:scale-105 transition-transform duration-300" 
+              />
+              <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border border-white"></span>
+              </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-black font-heading tracking-tight text-[#0F172A] group-hover:text-[#059669] transition-colors">
-                Zezepagnon <span className="text-[#059669] font-medium text-lg font-sans">Bénin</span>
+              <span className="text-2xl font-black font-heading tracking-tight text-[#0F172A] group-hover:text-[#0F62FE] transition-colors">
+                Zezepagnon <span className="text-[#0F62FE] font-medium text-lg font-sans">Bénin</span>
               </span>
-              <span className="text-[10px] text-[#0D9488] font-bold tracking-widest uppercase -mt-1 flex items-center gap-1">
-                <span>STOCKISTE AGRÉÉ MAPA</span>
+              <span className="text-[10px] text-[#004CCD] font-extrabold tracking-widest uppercase -mt-1 flex items-center gap-1">
+                <span>STOCKISTE AGRÉÉ MAPA ATLANTA-USA</span>
               </span>
             </div>
           </Link>

@@ -17,15 +17,17 @@ export const Footer = () => {
           {/* Brand Info & Benin Stockiste MAPA Details */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#059669] to-[#D97706] flex items-center justify-center text-white shadow-lg shadow-[#059669]/20">
-                <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
-              </div>
+              <img 
+                src="/img/logo.jpeg" 
+                alt="Logo MAPA Atlanta-USA" 
+                className="w-12 h-12 rounded-xl object-contain bg-white p-1 border border-blue-200 shadow-md group-hover:scale-105 transition-transform duration-300" 
+              />
               <div className="flex flex-col">
-                <span className="text-2xl font-black font-heading tracking-tight text-white group-hover:text-[#10B981] transition-colors">
-                  Zezepagnon <span className="text-[#10B981] font-medium text-lg font-sans">Bénin</span>
+                <span className="text-2xl font-black font-heading tracking-tight text-white group-hover:text-[#0F62FE] transition-colors">
+                  Zezepagnon <span className="text-[#0F62FE] font-medium text-lg font-sans">Bénin</span>
                 </span>
-                <span className="text-[10px] tracking-widest uppercase font-bold text-[#F59E0B] flex items-center gap-1">
-                  <Award size={11} /> Stockiste Agréé MAPA
+                <span className="text-[10px] tracking-widest uppercase font-bold text-[#FBBF24] flex items-center gap-1">
+                  <Award size={11} /> Stockiste Agréé MAPA Atlanta-USA
                 </span>
               </div>
             </Link>

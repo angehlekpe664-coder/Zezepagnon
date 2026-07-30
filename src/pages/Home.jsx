@@ -18,6 +18,9 @@ import { DoctorProfileCard } from '../components/common/DoctorProfileCard';
 import { FAQAccordion } from '../components/common/FAQAccordion';
 import { TestimonialCard, VideoTestimonialModal } from '../components/common/TestimonialCard';
 import { StockisteProfileCard } from '../components/common/StockisteProfileCard';
+import { MapaInfoCard } from '../components/common/MapaInfoCard';
+import { DrTagroProfileCard } from '../components/common/DrTagroProfileCard';
+import { GallerySection } from '../components/common/GallerySection';
 import { PRODUCTS } from '../data/products';
 import { DOCTORS } from '../data/doctors';
 import { FAQ_DATA } from '../data/faqData';
@@ -398,10 +401,23 @@ export const Home = () => {
         <FAQAccordion questions={FAQ_DATA[0].questions.concat(FAQ_DATA[1].questions)} />
       </section>
 
+      {/* S.E. Professeur Alain TAGRO Section */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <DrTagroProfileCard />
+      </section>
+
+      {/* MAPA Organisation Description Card */}
+      <section className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <MapaInfoCard />
+      </section>
+
       {/* Ambassadeur & Stockiste Profile Section */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
         <StockisteProfileCard />
       </section>
+
+      {/* Interactive Photo Gallery Section */}
+      <GallerySection />
 
       {/* DEDICATED SECTION: Qu'est-ce qu'un Stockiste MAPA ? */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">

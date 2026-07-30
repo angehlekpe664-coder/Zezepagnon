@@ -1,35 +1,35 @@
 export const DOCTORS = [
   {
-    id: "dr-elara-mensah",
-    name: "Dr. Elara Mensah",
-    role: "Lead Immunologist & Chercheuse en Oncologie",
-    institution: "Cotonou Research Institute",
-    location: "Cotonou, Bénin",
-    image: "/img/IMG-20260727-WA0147.jpg",
-    tags: ["BOARD CERTIFIED", "IMMUNE EXPERT"],
-    quote: "La biodisponibilité du sérum Zezepagnon démontre une supériorité remarquable par rapport aux alternatives synthétiques. Je le prescris aux patients nécessitant une régulation immunitaire intense.",
-    bio: "Pionnière dans les thérapies d'immunomodulation au Bénin, avec plus de 18 ans d'expérience clinique et de publications internationales."
+    id: "prof-alain-tagro",
+    name: "S.E. Professeur Alain TAGRO",
+    role: "Professeur d'Université (Miami, USA) & Chercheur Créateur du Zezepagnon",
+    institution: "Université de Miami (USA) & MAPA Atlanta-USA",
+    location: "Miami & Atlanta (USA) / Cotonou (Bénin)",
+    image: "/img/dr.jpeg",
+    tags: ["IVOIRO-AMÉRICAIN", "CHERCHEUR SÉNIOR", "CRÉATEUR ZEZEPAGNON"],
+    quote: "Le Zezepagnon est le fruit de plus de 10 ans de travaux de recherche d'excellence en immunothérapie cellulaire et pharmacopée africaine purifiée.",
+    bio: "Professeur d'université à l'Université de Miami (USA) et chercheur de renommée internationale, créateur de la formule Zezepagnon pour la régénération du système immunitaire et la santé globale."
   },
   {
-    id: "prof-kofi-adu",
-    name: "Prof. Kofi Adu",
-    role: "Directeur de l'Institut de Santé Cellulaire",
-    institution: "Cellular Health Centre",
-    location: "Abidjan & Cotonou",
+    id: "prof-richard-sawadogo",
+    name: "Professeur Richard SAWADOGO",
+    role: "Chercheur en Pharmacopée & Médecine Traditionnelle",
+    institution: "Laboratoire de Recherche Biomédicale MAPA",
+    location: "Afrique de l'Ouest",
     image: "/img/IMG-20260727-WA0149.jpg",
-    tags: ["CLINICAL LEAD", "RESEARCHER"],
-    quote: "Observer les résultats constants sur la résilience cellulaire mesurée chez nos patients est impressionnant. C'est un nouveau standard pour l'immunothérapie naturelle.",
-    bio: "Expert international en immunogénétique, consultant auprès d'organismes de santé publique et auteur de nombreux travaux sur la flore botanique ouest-africaine."
+    tags: ["CO-CHERCHEUR", "EXPERT PHARMACOPÉE"],
+    quote: "La combinaison scientifique des principes actifs de notre pharmacopée offre une puissance d'action inégalée contre les dysfonctionnements cellulaires.",
+    bio: "Eminent co-chercheur engagé aux côtés du Pr. Alain TAGRO pour le développement et la validation clinique des traitements immunothérapeutiques MAPA."
   },
   {
-    id: "dr-amina-diallo",
-    name: "Dr. Amina Diallo",
-    role: "Chef de Service d'Oncologie & Thérapies Biologiques",
-    institution: "Bénin Medical Center",
-    location: "Porto-Novo, Bénin",
-    image: "/img/IMG-20260727-WA0151.jpg",
-    tags: ["SR CONSULTANT", "INNOVATOR"],
-    quote: "L'intégration de savoirs traditionnels et de la rigueur scientifique fait de Zezepagnon un leader mondial de la santé cellulaire.",
-    bio: "Spécialiste de la médecine préventive et de l'immunité au Bénin, engagée pour l'accessibilité des soins de santé innovants."
+    id: "olatoundji-ilarion-biaou",
+    name: "M. OLATOUNDJI Ilarion BIAOU",
+    role: "Ambassadeur du Zezepagnon au Bénin & Stockiste Agréé MAPA",
+    institution: "Stockiste Officiel Certifié MAPA Bénin",
+    location: "Calavi / Togoudo & Cotonou, Bénin",
+    image: "/img/bi.png",
+    tags: ["AMBASSADEUR BÉNIN", "STOCKISTE CERTIFIÉ MAPA"],
+    quote: "Notre mission est d'assurer l'authenticité et la distribution sécurisée de chaque produit Zezepagnon pour la santé de tous les Béninois.",
+    bio: "Ambassadeur certifié du Zezepagnon au Bénin depuis 2023, gestionnaire exclusif et garant de la distribution officielle des produits MAPA sur l'ensemble du territoire béninois."
   }
 ];
