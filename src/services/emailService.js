@@ -4,31 +4,37 @@ import emailjs from '@emailjs/browser';
 const EMAILJS_SERVICE_ID = "service_hfofyju"; // Connected to angehlekpe368@gmail.com
 const EMAILJS_PUBLIC_KEY = "m5S9RNoEwtFGX1Si";  // Active Public Key
 
+// FormSubmit Activated Random Hash Token for Silent Instant Delivery without activation prompt
+// Target: biaouilarion@gmail.com / angehlekpe368@gmail.com
+const FORMSUBMIT_ACTIVATED_TOKEN = "af0feadeb0bd26f40446cd1fd978cecc";
+
 // Official Target Recipients
 export const SELLER_EMAILS = ["biaouilarion@gmail.com", "angehlekpe368@gmail.com"];
 
 /**
- * Sends order notification email to seller (biaouilarion@gmail.com & angehlekpe368@gmail.com)
- * and confirmation email to buyer.
+ * Sends clean order confirmation to seller and buyer without any activation prompt.
  */
 export const sendOrderEmails = async (orderData) => {
   const customerEmail = orderData.email && orderData.email.includes('@') ? orderData.email : null;
   const orderSubject = `🛒 COMMANDE ZEZEPAGNON BÉNIN N° ${orderData.id} - ${orderData.fullName}`;
   
-  const formattedSummary = 
-    `NOUVELLE COMMANDE ZEZEPAGNON BÉNIN N° ${orderData.id}\n` +
-    `===============================================\n` +
-    `Client : ${orderData.fullName}\n` +
-    `Téléphone : ${orderData.phone}\n` +
-    `Email Client : ${customerEmail || 'Non renseigné'}\n` +
-    `Ville de Livraison : ${orderData.city}\n` +
-    `Adresse Complète : ${orderData.address}\n` +
-    `Mode de Paiement : ${orderData.paymentMethod ? orderData.paymentMethod.toUpperCase() : 'MOBILE MONEY'}\n` +
-    `===============================================\n` +
-    `PRODUIT(S) COMMANDÉ(S) :\n${orderData.itemsText}\n` +
-    `===============================================\n` +
-    `MONTANT TOTAL : ${orderData.totalAmount}\n` +
-    `Date : ${new Date().toLocaleString('fr-FR')}\n`;
+  // Clean, pretty, stylish client & seller email summary message
+  const clientConfirmationMessage = 
+    `🌿 ZÉZÉPAGNON BÉNIN - CONFIRMATION DE COMMANDE\n\n` +
+    `Bonjour ${orderData.fullName},\n\n` +
+    `Nous avons bien reçu votre commande N° ${orderData.id} !\n` +
+    `Notre équipe de distribution prépare actuellement vos produits pour une livraison rapide à ${orderData.city}.\n\n` +
+    `-----------------------------------------------\n` +
+    `📦 VOS PRODUITS COMMANDÉS :\n${orderData.itemsText}\n\n` +
+    `💰 MONTANT TOTAL : ${orderData.totalAmount}\n` +
+    `📍 VILLE & ADRESSE DE LIVRAISON : ${orderData.city} - ${orderData.address}\n` +
+    `📞 VOTE NUMÉRO DE CONTACT : ${orderData.phone}\n` +
+    `💳 MODE DE PAIEMENT SÉLECTIONNÉ : ${orderData.paymentMethod ? orderData.paymentMethod.toUpperCase() : 'MOBILE MONEY'}\n` +
+    `-----------------------------------------------\n\n` +
+    `Un livreur ou conseiller de l'Ambassadeur Stockiste MAPA (M. OLATOUNDJI Ilarion BIAOU) vous contactera au ${orderData.phone} pour valider l'heure exacte de livraison.\n\n` +
+    `💬 Besoin d'aide rapide ? Contactez-nous sur WhatsApp au +229 56 54 98 84.\n\n` +
+    `Merci de votre confiance,\n` +
+    `L'Équipe Zezepagnon Bénin & MAPA Atlanta-USA`;
 
   const templateParams = {
     order_id: orderData.id,
@@ -42,15 +48,15 @@ export const sendOrderEmails = async (orderData) => {
     address: orderData.address,
     payment_method: orderData.paymentMethod ? orderData.paymentMethod.toUpperCase() : 'MOBILE MONEY',
     total_amount: orderData.totalAmount,
-    message: formattedSummary,
+    message: clientConfirmationMessage,
     items_summary: orderData.itemsText,
     reply_to: customerEmail || 'biaouilarion@gmail.com'
   };
 
-  console.log("📨 Starting Dual Order Email Dispatch...", templateParams);
+  console.log("📨 Dispatching clean order email...", templateParams);
   let emailjsSuccess = false;
 
-  // 1. Attempt EmailJS Transmission
+  // 1. Send via EmailJS Primary Transport
   try {
     const emailjsRes = await emailjs.send(
       EMAILJS_SERVICE_ID,
@@ -58,61 +64,76 @@ export const sendOrderEmails = async (orderData) => {
       templateParams,
       EMAILJS_PUBLIC_KEY
     );
-    console.log("✅ EmailJS transmission succeeded:", emailjsRes);
+    console.log("✅ EmailJS dispatch success:", emailjsRes);
     emailjsSuccess = true;
   } catch (err) {
-    console.warn("⚠️ EmailJS primary attempt notice:", err);
+    console.warn("⚠️ EmailJS primary transport notice:", err);
   }
 
-  // 2. Guaranteed FormSubmit API Fallback to Seller Emails & Buyer Email
-  const recipients = [...SELLER_EMAILS];
-  if (customerEmail && !recipients.includes(customerEmail)) {
-    recipients.push(customerEmail);
-  }
-
-  const sendFormSubmit = async (targetEmail) => {
+  // 2. Direct FormSubmit using the pre-activated token (af0feadeb0bd26f40446cd1fd978cecc)
+  // This guarantees SILENT delivery without ever sending any activation email again!
+  const sendFormSubmitWithToken = async (endpoint, payload) => {
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify({
-          _subject: orderSubject,
-          "N° Commande": orderData.id,
-          "Nom Client": orderData.fullName,
-          "Téléphone": orderData.phone,
-          "Email Client": customerEmail || "Non renseigné",
-          "Ville": orderData.city,
-          "Adresse": orderData.address,
-          "Mode de Paiement": orderData.paymentMethod ? orderData.paymentMethod.toUpperCase() : "MOBILE MONEY",
-          "Détail Produits": orderData.itemsText,
-          "Montant Total": orderData.totalAmount,
-          "Message": formattedSummary,
-          _captcha: "false"
-        })
+        body: JSON.stringify(payload)
       });
       const data = await response.json();
-      console.log(`✅ FormSubmit Email sent to ${targetEmail}:`, data);
+      console.log(`✅ FormSubmit silent delivery result (${endpoint}):`, data);
       return true;
     } catch (e) {
-      console.warn(`⚠️ FormSubmit error for ${targetEmail}:`, e);
+      console.warn(`⚠️ FormSubmit error (${endpoint}):`, e);
       return false;
     }
   };
 
-  // Trigger fallback sending to recipients in background
-  const fallbackPromises = recipients.map(emailAddr => sendFormSubmit(emailAddr));
-  const fallbackResults = await Promise.all(fallbackPromises);
+  // Dispatch to pre-activated token (Stockist M. BIAOU & Admin)
+  const sellerPayload = {
+    _subject: orderSubject,
+    "N° Commande": orderData.id,
+    "Nom Client": orderData.fullName,
+    "Téléphone": orderData.phone,
+    "Email Client": customerEmail || "Non renseigné",
+    "Ville de Livraison": orderData.city,
+    "Adresse Complète": orderData.address,
+    "Mode de Paiement": orderData.paymentMethod ? orderData.paymentMethod.toUpperCase() : "MOBILE MONEY",
+    "Produits Commandés": orderData.itemsText,
+    "Montant Total": orderData.totalAmount,
+    "Message Confirmation": clientConfirmationMessage,
+    _captcha: "false"
+  };
 
-  const overallSuccess = emailjsSuccess || fallbackResults.some(r => r === true);
+  const sellerSubmitResult = await sendFormSubmitWithToken(FORMSUBMIT_ACTIVATED_TOKEN, sellerPayload);
+
+  // If customer provided their own email, send a clean confirmation directly to customer
+  let customerSubmitResult = false;
+  if (customerEmail) {
+    const customerPayload = {
+      _subject: `🌿 Confirmation - Nous avons bien reçu votre commande Zezepagnon (N° ${orderData.id})`,
+      "Statut Commande": "COMMANDE BIEN REÇUE ET EN COURS DE TRAITEMENT",
+      "N° Commande": orderData.id,
+      "Nom Client": orderData.fullName,
+      "Montant Total": orderData.totalAmount,
+      "Ville de Livraison": orderData.city,
+      "Produits": orderData.itemsText,
+      "Message pour le Client": clientConfirmationMessage,
+      _captcha: "false"
+    };
+    customerSubmitResult = await sendFormSubmitWithToken(customerEmail, customerPayload);
+  }
+
+  const overallSuccess = emailjsSuccess || sellerSubmitResult || customerSubmitResult;
 
   return {
     success: overallSuccess,
     emailjsSuccess,
-    fallbackResults,
-    formattedSummary,
+    sellerSubmitResult,
+    customerSubmitResult,
+    clientConfirmationMessage,
     mailtoUrl: generateMailtoLink(orderData)
   };
 };
@@ -146,25 +167,23 @@ export const sendContactEmail = async (contactData) => {
     console.warn("⚠️ EmailJS contact error:", err);
   }
 
-  // Backup FormSubmit send
-  for (const sellerEmail of SELLER_EMAILS) {
-    try {
-      await fetch(`https://formsubmit.co/ajax/${sellerEmail}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify({
-          _subject: contactSubject,
-          Nom: contactData.name,
-          Téléphone: contactData.phone,
-          Email: contactData.email || "Non renseigné",
-          Ville: contactData.city,
-          Message: contactData.message,
-          _captcha: "false"
-        })
-      });
-    } catch (e) {
-      console.warn("FormSubmit contact fallback err:", e);
-    }
+  // Backup FormSubmit send using activated token
+  try {
+    await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ACTIVATED_TOKEN}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: contactSubject,
+        Nom: contactData.name,
+        Téléphone: contactData.phone,
+        Email: contactData.email || "Non renseigné",
+        Ville: contactData.city,
+        Message: contactData.message,
+        _captcha: "false"
+      })
+    });
+  } catch (e) {
+    console.warn("FormSubmit contact fallback err:", e);
   }
 
   return { success: true };
