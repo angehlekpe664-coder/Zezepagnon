@@ -41,30 +41,32 @@ export function App() {
           <ScrollToTop />
           <div className="min-h-screen flex flex-col justify-between bg-[#F4F7FB] text-[#0F172A] relative overflow-hidden">
             <CellularBackground />
-            <Navbar />
-            <Toast />
-            <main className="flex-grow z-10 relative">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/immunotherapy" element={<Immunotherapy />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/product/:id" element={<ProductDetails />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/testimonials" element={<Testimonials />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/dashboard" element={<UserDashboard />} />
-                <Route path="/order-tracking" element={<OrderTracking />} />
-                <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/terms" element={<TermsOfService />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-            <WhatsAppButton />
+            <div className="relative z-10 flex flex-col min-h-screen justify-between">
+              <Navbar />
+              <Toast />
+              <main className="flex-grow z-10 relative">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/immunotherapy" element={<Immunotherapy />} />
+                  <Route path="/products" element={<Products />} />
+                  <Route path="/product/:id" element={<ProductDetails />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/testimonials" element={<Testimonials />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/dashboard" element={<UserDashboard />} />
+                  <Route path="/order-tracking" element={<OrderTracking />} />
+                  <Route path="/privacy" element={<PrivacyPolicy />} />
+                  <Route path="/terms" element={<TermsOfService />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+              <Footer />
+              <WhatsAppButton />
+            </div>
           </div>
         </Router>
       </CartProvider>
