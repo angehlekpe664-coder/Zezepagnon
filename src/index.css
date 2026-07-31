@@ -4,15 +4,22 @@
 
 @layer base {
   body {
-    background-color: #F4F7FB;
+    background-color: #F8FAFC;
     color: #0F172A;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
+    color: #0F172A;
+  }
+
+  p {
+    color: #334155;
   }
 
   .font-display {
@@ -21,13 +28,13 @@
 }
 
 @layer utilities {
-  /* Modern Glassmorphism System */
+  /* Modern Glassmorphism System with High Contrast & Vibrancy */
   .glass-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 10px 30px -5px rgba(15, 98, 254, 0.05);
+    border: 1px solid rgba(203, 213, 225, 0.8);
+    box-shadow: 0 10px 30px -5px rgba(15, 98, 254, 0.08);
   }
 
   .glass-card-hover {
@@ -35,33 +42,33 @@
   }
   .glass-card-hover:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 45px -10px rgba(15, 98, 254, 0.15);
-    border-color: rgba(15, 98, 254, 0.3);
+    box-shadow: 0 22px 50px -10px rgba(15, 98, 254, 0.18);
+    border-color: rgba(15, 98, 254, 0.4);
   }
 
   .glass-nav {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   }
 
   .glass-dark {
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  /* Vibrant Gradient Text Variants */
+  /* Vibrant Gradient Text Colors for High Contrast UI/UX */
   .text-gradient-primary {
-    background: linear-gradient(135deg, #0F62FE 0%, #004CCD 50%, #10B981 100%);
+    background: linear-gradient(135deg, #0F62FE 0%, #003899 50%, #10B981 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-emerald {
-    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    background: linear-gradient(135deg, #10B981 0%, #047857 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -73,13 +80,17 @@
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+  .text-gradient-[#FBBF24] {
+    color: #FBBF24;
+  }
+
   .text-gradient-dark {
-    background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -94,7 +105,7 @@
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
+    background: #94A3B8;
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -115,25 +126,25 @@
 
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-15px) scale(1.05); }
+  50% { transform: translateY(-16px) scale(1.04); }
 }
 
 @keyframes bounceSlow {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulseSlow {
-  0%, 100% { opacity: 0.25; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(1.08); }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.08); }
 }
 
 .animate-spin-slow {
-  animation: spinSlow 25s linear infinite;
+  animation: spinSlow 28s linear infinite;
 }
 
 .animate-reverse-spin-slow {
-  animation: reverseSpinSlow 30s linear infinite;
+  animation: reverseSpinSlow 32s linear infinite;
 }
 
 .animate-float-slow {
