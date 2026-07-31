@@ -28,21 +28,21 @@ export const About = () => {
       {/* Lab Stats */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="glass-card rounded-3xl p-6 bg-gradient-to-br from-[#0F62FE] to-[#004CCD] text-white text-center shadow-xl">
-            <span className="text-4xl font-extrabold block mb-1">10+</span>
-            <span className="text-xs font-medium text-blue-100 uppercase tracking-wider">Années de Recherche</span>
+          <div className="rounded-3xl p-6 bg-gradient-to-br from-[#0F62FE] to-[#003899] text-white text-center shadow-xl border border-blue-400/30">
+            <span className="text-4xl font-extrabold text-white block mb-1 drop-shadow-sm">10+</span>
+            <span className="text-xs font-bold text-blue-100 uppercase tracking-wider">Années de Recherche</span>
           </div>
-          <div className="glass-card rounded-3xl p-6 bg-white border border-gray-100 text-center shadow-soft">
+          <div className="rounded-3xl p-6 bg-white/90 backdrop-blur-md border border-gray-200 text-center shadow-md">
             <span className="text-4xl font-extrabold text-[#1FA971] block mb-1">98%</span>
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">Satisfaction Patients</span>
+            <span className="text-xs font-bold text-gray-600 uppercase tracking-wider">Satisfaction Patients</span>
           </div>
-          <div className="glass-card rounded-3xl p-6 bg-white border border-gray-100 text-center shadow-soft">
-            <span className="text-4xl font-extrabold text-gray-900 block mb-1">15k+</span>
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">Consultations & Suivis</span>
+          <div className="rounded-3xl p-6 bg-white/90 backdrop-blur-md border border-gray-200 text-center shadow-md">
+            <span className="text-4xl font-extrabold text-slate-900 block mb-1">15k+</span>
+            <span className="text-xs font-bold text-gray-600 uppercase tracking-wider">Consultations & Suivis</span>
           </div>
-          <div className="glass-card rounded-3xl p-6 bg-emerald-50 border border-emerald-100 text-center">
+          <div className="rounded-3xl p-6 bg-emerald-50/90 backdrop-blur-md border border-emerald-200 text-center shadow-md">
             <span className="text-4xl font-extrabold text-[#1FA971] block mb-1">100%</span>
-            <span className="text-xs font-medium text-[#1FA971] uppercase tracking-wider">Ingrédients Purifiés</span>
+            <span className="text-xs font-bold text-[#059669] uppercase tracking-wider">Ingrédients Purifiés</span>
           </div>
         </div>
       </section>
