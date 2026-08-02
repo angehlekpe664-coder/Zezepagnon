@@ -9,7 +9,7 @@ const EMAILJS_PUBLIC_KEY = "m5S9RNoEwtFGX1Si";  // Active Public Key
 const FORMSUBMIT_ACTIVATED_TOKEN = "af0feadeb0bd26f40446cd1fd978cecc";
 
 // Official Target Recipients
-export const SELLER_EMAILS = ["biaouilarion@gmail.com", "angehlekpe368@gmail.com"];
+export const SELLER_EMAILS = ["zezepagnonbenin58@gmail.com", "biaouilarion@gmail.com", "angehlekpe368@gmail.com"];
 
 /**
  * Sends clean order confirmation to seller and buyer without any activation prompt.
@@ -207,5 +207,5 @@ export const generateMailtoLink = (orderData) => {
     `Merci de me confirmer la livraison à mon adresse.\n\n` +
     `Cordialement,\n${orderData.fullName}`
   );
-  return `mailto:biaouilarion@gmail.com,angehlekpe368@gmail.com?subject=${subject}&body=${body}`;
+  return `mailto:zezepagnonbenin58@gmail.com,biaouilarion@gmail.com?subject=${subject}&body=${body}`;
 };
