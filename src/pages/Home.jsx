@@ -11,7 +11,9 @@ import {
   ChevronRight,
   Award,
   ShieldCheck,
-  Zap
+  Zap,
+  CreditCard,
+  Truck
 } from 'lucide-react';
 import { ProductCard } from '../components/common/ProductCard';
 import { DoctorProfileCard } from '../components/common/DoctorProfileCard';
@@ -95,9 +97,9 @@ export const Home = () => {
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black text-slate-900 tracking-tight leading-tight sm:leading-[1.12] break-words">
-              L'Avenir de la Santé : <br />
-              <span className="text-[#064e3b] font-display inline-block mt-1">L'Immunothérapie Zezepagnon</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-heading font-black text-slate-900 tracking-tight leading-tight sm:leading-[1.15]">
+              L'Avenir de la Santé : <br className="hidden sm:inline" />
+              <span className="text-[#064e3b] font-display block mt-1 font-extrabold whitespace-nowrap sm:whitespace-normal">L'Immunothérapie Zezepagnon</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-2xl font-sans font-medium">
@@ -124,18 +126,18 @@ export const Home = () => {
               </Link>
             </div>
 
-            {/* Quick Trust Badges */}
+            {/* Quick Trust Badges with Lucide React Icons */}
             <div className="pt-2 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-800 font-semibold">
               <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
-                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <ShieldCheck size={16} className="text-[#059669] shrink-0" />
                 <span>Stockiste MAPA Bénin</span>
               </div>
               <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
-                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <CreditCard size={16} className="text-[#059669] shrink-0" />
                 <span>Paiement MoMo / Wave</span>
               </div>
               <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
-                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <Truck size={16} className="text-[#059669] shrink-0" />
                 <span>Livraison 24h Cotonou</span>
               </div>
             </div>

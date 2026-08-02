@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Phone, Mail, MapPin, Send, ArrowUp, Award } from 'lucide-react';
+import { ShieldCheck, Phone, Mail, MapPin, Send, ArrowUp, Award, Smartphone, Wallet, Banknote } from 'lucide-react';
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -109,11 +109,26 @@ export const Footer = () => {
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-2">
-            <span className="text-slate-400 mr-1">Paiements sécurisés Bénin :</span>
-            <span className="bg-yellow-500/15 border border-yellow-500/30 text-yellow-300 font-bold px-2.5 py-0.5 rounded-full text-[11px]">MTN MoMo 🇧🇯</span>
-            <span className="bg-blue-500/15 border border-blue-500/30 text-blue-300 font-bold px-2.5 py-0.5 rounded-full text-[11px]">Moov Money 🇧🇯</span>
-            <span className="bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-bold px-2.5 py-0.5 rounded-full text-[11px]">Wave</span>
-            <span className="bg-slate-800 border border-slate-700 text-slate-300 px-2.5 py-0.5 rounded-full text-[11px]">Espèces livraison</span>
+            <span className="text-slate-400 mr-1 flex items-center gap-1 font-medium">
+              <ShieldCheck size={14} className="text-[#059669]" />
+              Paiements sécurisés Bénin :
+            </span>
+            <span className="bg-amber-500/15 border border-amber-500/30 text-amber-300 font-bold px-2.5 py-0.5 rounded-full text-[11px] flex items-center gap-1">
+              <Smartphone size={12} className="text-amber-400" />
+              MTN MoMo
+            </span>
+            <span className="bg-blue-500/15 border border-blue-500/30 text-blue-300 font-bold px-2.5 py-0.5 rounded-full text-[11px] flex items-center gap-1">
+              <Smartphone size={12} className="text-blue-400" />
+              Moov Money
+            </span>
+            <span className="bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-bold px-2.5 py-0.5 rounded-full text-[11px] flex items-center gap-1">
+              <Wallet size={12} className="text-emerald-400" />
+              Wave
+            </span>
+            <span className="bg-slate-800 border border-slate-700 text-slate-300 px-2.5 py-0.5 rounded-full text-[11px] flex items-center gap-1">
+              <Banknote size={12} className="text-slate-400" />
+              Espèces livraison
+            </span>
           </div>
 
           <button

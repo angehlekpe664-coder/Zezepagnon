@@ -53,11 +53,11 @@ export const Navbar = () => {
             </Link>
             <button 
               onClick={() => setCurrency(currency === 'XOF' ? 'USD' : 'XOF')}
-              className="flex items-center gap-1 bg-white/10 hover:bg-white/20 border border-white/15 px-2 py-0.5 rounded-full text-[10px] font-semibold transition-all shrink-0"
+              className="flex items-center gap-1 bg-white/10 hover:bg-white/20 border border-white/15 px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-all shrink-0"
               title="Changer la devise de paiement"
             >
               <Globe size={11} className="text-emerald-300" />
-              <span>{currency === 'XOF' ? 'FCFA 🇧🇯' : 'USD $'}</span>
+              <span>{currency === 'XOF' ? 'FCFA (XOF)' : 'USD ($)'}</span>
             </button>
           </div>
         </div>

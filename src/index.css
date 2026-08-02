@@ -16,8 +16,10 @@
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
     color: #0F172A;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 
   p {
