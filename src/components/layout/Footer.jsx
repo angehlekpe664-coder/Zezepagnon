@@ -35,17 +35,20 @@ export const Footer = () => {
               Représentation et distribution officielle des traitements d'immunothérapie Zezepagnon par le Stockiste Agréé MAPA en République du Bénin. Formulations scientifiques du Pr Alain Tagro Kalou pour la régénération cellulaire et la résilience immunitaire.
             </p>
             <div className="space-y-2.5 text-sm text-slate-300 pt-2">
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-[#10B981] shrink-0" />
-                <span>Siège Stockiste MAPA : Abomey-Calavi & Cotonou, Bénin</span>
+              <div className="flex items-start space-x-3">
+                <MapPin size={16} className="text-[#059669] shrink-0 mt-0.5" />
+                <span>Points de Distribution MAPA : Cotonou, Calavi & Parakou</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Phone size={16} className="text-[#D97706] shrink-0 mt-0.5" />
+                <div className="space-y-1 text-xs">
+                  <p className="font-bold text-emerald-300">Cotonou : +229 01 67 31 31 02 / +229 01 40 51 90 41 / +229 56 54 98 84</p>
+                  <p className="font-bold text-emerald-300">Parakou : +229 01 97 11 36 52 / +229 01 42 61 41 61</p>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-[#F59E0B] shrink-0" />
-                <span className="font-semibold text-emerald-300">+229 56 54 98 84 / Stockiste Direct WhatsApp Bénin</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-[#10B981] shrink-0" />
-                <span>benin@zezepagnon.com</span>
+                <Mail size={16} className="text-[#059669] shrink-0" />
+                <span>contact@zezepagnon-benin.com</span>
               </div>
             </div>
           </div>

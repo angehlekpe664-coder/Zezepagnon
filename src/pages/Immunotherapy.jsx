@@ -8,13 +8,13 @@ export const Immunotherapy = () => {
       <Breadcrumbs items={[{ name: 'Immunothérapie Zezepagnon' }]} />
 
       <section className="max-w-[1440px] mx-auto px-4 md:px-8 text-center max-w-3xl">
-        <span className="text-xs font-bold text-[#0F62FE] uppercase tracking-wider bg-blue-50 px-3.5 py-1.5 rounded-full">
+        <span className="text-xs font-bold text-[#059669] uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full">
           PHARMACOPÉE 100% AFRICAINE
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 mb-6">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight break-words">
           La Science Zezepagnon du Pr Alain Tagro Kalou
         </h1>
-        <p className="text-base text-gray-600 leading-relaxed">
+        <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
           Dix plantes sélectionnées et transformées selon les traditions et les recherches doctorales en microbiologie et immunologie pour fortifier les défenses cellulaires naturelles du corps.
         </p>
       </section>

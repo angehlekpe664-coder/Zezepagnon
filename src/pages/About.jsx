@@ -14,13 +14,13 @@ export const About = () => {
 
       {/* Header */}
       <section className="max-w-[1440px] mx-auto px-4 md:px-8 text-center max-w-3xl">
-        <span className="text-xs font-bold text-[#0F62FE] uppercase tracking-wider bg-[#0F62FE]/10 px-3.5 py-1.5 rounded-full">
+        <span className="text-xs font-bold text-[#059669] uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full">
           10+ ANS DE RECHERCHE CLINIQUE
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 mb-6">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight break-words">
           Une Décennie de Précision au Service de l'Immunité
         </h1>
-        <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed font-medium">
           Nos travaux s'étendent sur plus de 10 ans de recherches biomédicales intensives et de partenariats scientifiques pour offrir aux patients au Bénin un accès privilégié à des solutions immunothérapeutiques de classe mondiale.
         </p>
       </section>

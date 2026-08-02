@@ -195,7 +195,7 @@ export const sendContactEmail = async (contactData) => {
 export const generateMailtoLink = (orderData) => {
   const subject = encodeURIComponent(`Reçu de Commande Zezepagnon N° ${orderData.id}`);
   const body = encodeURIComponent(
-    `Bonjour M. OLATOUNDJI Ilarion BIAOU (Ambassadeur Stockiste MAPA),\n\n` +
+    `Bonjour MM. les Stockistes MAPA Bénin (M. BIAOU & Mr PASSOURI),\n\n` +
     `Je viens d'effectuer une commande sur le site Zezepagnon Bénin.\n\n` +
     `Détails de ma commande (N° ${orderData.id}) :\n` +
     `- Client : ${orderData.fullName}\n` +

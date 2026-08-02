@@ -78,65 +78,65 @@ export const Home = () => {
     <div className="space-y-16 md:space-y-24 pb-16">
       
       {/* Hero Section */}
-      <section className="relative pt-6 md:pt-12 px-4 md:px-8 max-w-[1440px] mx-auto">
+      <section className="relative pt-4 md:pt-10 px-3 sm:px-6 md:px-8 max-w-[1440px] mx-auto overflow-hidden">
         
-        {/* Glow ambient backdrops */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-[#059669]/15 rounded-full blur-3xl -z-10 animate-glow"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl -z-10 animate-glow"></div>
+        {/* Glow ambient backdrops (Desktop only for performance) */}
+        <div className="hidden md:block absolute top-10 left-10 w-96 h-96 bg-[#059669]/10 rounded-full blur-3xl -z-10"></div>
+        <div className="hidden md:block absolute bottom-10 right-10 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl -z-10"></div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           
           {/* Left Hero Text */}
-          <div className="lg:col-span-7 space-y-6 text-left relative z-10">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0F62FE]/15 via-[#6366F1]/15 to-[#10B981]/15 border border-[#0F62FE]/30 px-4 py-2 rounded-full shadow-sm backdrop-blur-md">
-              <Award size={16} className="text-[#0F62FE] animate-bounce-slow" />
-              <span className="text-xs font-heading font-extrabold uppercase tracking-widest text-[#0F62FE]">
+          <div className="lg:col-span-7 space-y-5 text-left relative z-10">
+            <div className="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full shadow-xs max-w-full">
+              <Award size={15} className="text-[#059669] shrink-0" />
+              <span className="text-[11px] sm:text-xs font-heading font-extrabold uppercase tracking-wider text-[#047857] truncate">
                 STOCKISTE AGRÉÉ MAPA BÉNIN
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-gray-900 tracking-tight leading-[1.12]">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black text-slate-900 tracking-tight leading-tight sm:leading-[1.12] break-words">
               L'Avenir de la Santé : <br />
-              <span className="text-gradient-vibrant font-display">L'Immunothérapie Zezepagnon</span>
+              <span className="text-[#064e3b] font-display inline-block mt-1">L'Immunothérapie Zezepagnon</span>
             </h1>
 
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl font-sans">
+            <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-2xl font-sans font-medium">
               Issue des recherches scientifiques en microbiologie du Pr. Alain Tagro Kalou, l'immunothérapie Zezepagnon combine la puissance de 10 plantes d'Afrique pour régénérer votre système immunitaire au Bénin.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <Link
                 to="/products"
-                className="flex items-center space-x-2.5 bg-gradient-to-r from-[#0F62FE] via-[#004CCD] to-[#10B981] hover:from-[#10B981] hover:to-[#0F62FE] text-white font-heading font-bold px-8 py-4 rounded-2xl shadow-xl shadow-[#0F62FE]/30 hover:scale-[1.03] active:scale-[0.98] transition-all text-base"
+                className="flex items-center justify-center space-x-2.5 bg-gradient-to-r from-[#059669] via-[#046C4E] to-[#0F766E] hover:from-[#046C4E] hover:to-[#059669] text-white font-heading font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl shadow-lg shadow-[#059669]/25 transition-all text-sm sm:text-base"
               >
-                <Sparkles size={18} className="text-[#7FFABA] animate-pulse" />
+                <Sparkles size={18} className="text-[#FBBF24]" />
                 <span>Commander Zezepagnon</span>
                 <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/immunotherapy"
-                className="flex items-center space-x-2 bg-white/90 hover:bg-white text-gray-800 font-heading font-bold px-6 py-4 rounded-2xl border border-blue-100 shadow-soft hover:shadow-md hover:border-[#0F62FE]/30 transition-all text-base"
+                className="flex items-center justify-center space-x-2 bg-white text-slate-800 font-heading font-bold px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl border border-slate-300 shadow-xs hover:border-[#059669] transition-all text-sm sm:text-base"
               >
-                <FileText size={18} className="text-[#0F62FE]" />
+                <FileText size={18} className="text-[#059669]" />
                 <span>La Science Zezepagnon</span>
               </Link>
             </div>
 
             {/* Quick Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-gray-700 font-semibold">
-              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
-                <CheckCircle2 size={16} className="text-[#10B981]" />
-                <span>Stockiste Officiel MAPA Bénin</span>
+            <div className="pt-2 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-800 font-semibold">
+              <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
+                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <span>Stockiste MAPA Bénin</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
-                <CheckCircle2 size={16} className="text-[#10B981]" />
-                <span>Paiement MoMo / Moov / Wave</span>
+              <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
+                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <span>Paiement MoMo / Wave</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/90 px-3.5 py-2 rounded-xl border border-gray-200/80 shadow-sm backdrop-blur-md">
-                <CheckCircle2 size={16} className="text-[#10B981]" />
-                <span>Livraison 24h Cotonou & Calavi</span>
+              <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
+                <CheckCircle2 size={15} className="text-[#059669] shrink-0" />
+                <span>Livraison 24h Cotonou</span>
               </div>
             </div>
 

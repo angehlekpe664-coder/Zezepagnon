@@ -86,42 +86,53 @@ export const Contact = () => {
           
           {/* Contact Details Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-card rounded-3xl p-8 bg-white border border-gray-200 space-y-6 shadow-soft">
-              <h3 className="text-xl font-bold text-gray-900">Stockiste Agréé MAPA Bénin</h3>
+            <div className="glass-card rounded-3xl p-8 bg-white border border-slate-200 space-y-6 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Coordonnées des Stockistes MAPA</h3>
               
-              <div className="space-y-4 text-sm text-gray-700">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="text-[#0F62FE] shrink-0 mt-1" size={20} />
-                  <div>
-                    <span className="font-bold block text-gray-900">Siège du Stockiste MAPA</span>
-                    <span>Calavi / Togoudo & Cotonou, République du Bénin</span>
+              <div className="space-y-5 text-sm text-slate-700">
+                {/* Premier Stockiste - Cotonou */}
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+                  <span className="text-xs font-bold text-[#059669] uppercase tracking-wider block">
+                    Premier Stockiste : M. OLATOUNDJI Ilarion BIAOU
+                  </span>
+                  <div className="flex items-start space-x-2.5 text-xs">
+                    <MapPin className="text-[#059669] shrink-0 mt-0.5" size={16} />
+                    <span>Cotonou & Calavi (Sud Bénin)</span>
+                  </div>
+                  <div className="flex items-start space-x-2.5 text-xs font-semibold">
+                    <Phone className="text-[#D97706] shrink-0 mt-0.5" size={16} />
+                    <div className="space-y-0.5">
+                      <p>+229 01 67 31 31 02 (Cotonou)</p>
+                      <p>+229 01 40 51 90 41 (Cotonou)</p>
+                      <p>+229 56 54 98 84 (WhatsApp Direct)</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3">
-                  <Phone className="text-[#0F62FE] shrink-0 mt-1" size={20} />
-                  <div>
-                    <span className="font-bold block text-gray-900">Ligne Directe Stockiste Bénin</span>
-                    <span>+229 56 54 98 84 (01 56 54 98 84)</span>
+                {/* Second Stockiste - Parakou */}
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+                  <span className="text-xs font-bold text-[#059669] uppercase tracking-wider block">
+                    Second Stockiste : Mr PASSOURI
+                  </span>
+                  <div className="flex items-start space-x-2.5 text-xs">
+                    <MapPin className="text-[#059669] shrink-0 mt-0.5" size={16} />
+                    <span>Parakou (Nord Bénin)</span>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <MessageCircle className="text-[#25D366] shrink-0 mt-1" size={20} />
-                  <div>
-                    <span className="font-bold block text-gray-900">Commande WhatsApp Rapide</span>
-                    <a href="https://wa.me/22956549884" target="_blank" rel="noreferrer" className="text-[#25D366] font-semibold hover:underline">
-                      Discuter avec le Stockiste (+229 56 54 98 84)
-                    </a>
+                  <div className="flex items-start space-x-2.5 text-xs font-semibold">
+                    <Phone className="text-[#D97706] shrink-0 mt-0.5" size={16} />
+                    <div className="space-y-0.5">
+                      <p>+229 01 97 11 36 52 (Parakou)</p>
+                      <p>+229 01 42 61 41 61 (Parakou)</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Coverage Towns Badge */}
-            <div className="glass-card rounded-2xl p-6 bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 space-y-2">
-              <span className="text-xs font-bold text-[#1FA971] uppercase">Villes Livrées au Bénin en 24h</span>
-              <p className="text-xs text-gray-600">Abomey-Calavi, Cotonou, Porto-Novo, Bohicon, Parakou, Natitingou, Ouidah, Lokossa, Djougou.</p>
+            <div className="glass-card rounded-2xl p-6 bg-emerald-50/80 border border-emerald-200 space-y-2">
+              <span className="text-xs font-bold text-[#047857] uppercase">Villes Livrées au Bénin en 24h</span>
+              <p className="text-xs text-slate-700 font-medium">Cotonou, Abomey-Calavi, Porto-Novo, Parakou, Bohicon, Natitingou, Ouidah, Lokossa, Djougou.</p>
             </div>
           </div>
 

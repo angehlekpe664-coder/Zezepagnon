@@ -34,58 +34,57 @@ export const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 transition-all duration-300">
       {/* Top Benin MAPA Certified Distribution Bar */}
-      <div className="bg-gradient-to-r from-[#022C22] via-[#046C4E] to-[#0D9488] text-white text-xs py-2 px-4 shadow-sm">
-        <div className="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex items-center space-x-2.5">
-            <span className="inline-flex items-center gap-1 bg-[#F59E0B]/20 text-[#FBBF24] border border-[#F59E0B]/40 px-2 py-0.5 rounded-full font-semibold text-[11px]">
-              <Award size={12} className="text-[#FBBF24]" />
-              Stockiste Officiel MAPA
+      <div className="bg-[#022C22] text-white text-[11px] py-1.5 px-3 sm:px-4 shadow-xs">
+        <div className="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center space-x-2">
+            <span className="inline-flex items-center gap-1 bg-[#F59E0B]/20 text-[#FBBF24] border border-[#F59E0B]/30 px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-[11px] shrink-0">
+              <Award size={11} className="text-[#FBBF24]" />
+              Stockiste MAPA
             </span>
-            <span className="hidden sm:inline text-white/40">|</span>
-            <span className="hidden sm:inline text-emerald-100 font-medium">
+            <span className="hidden sm:inline text-white/30">|</span>
+            <span className="hidden md:inline text-emerald-100 font-medium text-xs">
               ⚡ Livraison Express 24h & Paiement Mobile Money (MTN / Moov) à Cotonou & Calavi
             </span>
           </div>
-          <div className="flex items-center space-x-4">
-            <Link to="/order-tracking" className="hover:underline flex items-center gap-1.5 text-emerald-100 hover:text-white transition-colors">
-              <Truck size={13} className="text-[#FBBF24]" />
-              <span className="font-medium">Suivre ma commande</span>
+          <div className="flex items-center space-x-3 text-[11px]">
+            <Link to="/order-tracking" className="hover:underline flex items-center gap-1 text-emerald-100 hover:text-white transition-colors">
+              <Truck size={12} className="text-[#FBBF24]" />
+              <span className="font-medium">Suivre commande</span>
             </Link>
             <button 
               onClick={() => setCurrency(currency === 'XOF' ? 'USD' : 'XOF')}
-              className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 border border-white/15 px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-all"
+              className="flex items-center gap-1 bg-white/10 hover:bg-white/20 border border-white/15 px-2 py-0.5 rounded-full text-[10px] font-semibold transition-all shrink-0"
               title="Changer la devise de paiement"
             >
-              <Globe size={12} className="text-emerald-300" />
-              <span>{currency === 'XOF' ? 'FCFA (Bénin 🇧🇯)' : 'USD ($ 🇺🇸)'}</span>
+              <Globe size={11} className="text-emerald-300" />
+              <span>{currency === 'XOF' ? 'FCFA 🇧🇯' : 'USD $'}</span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Glass Navbar */}
-      <nav className="glass-nav border-b border-emerald-900/5">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+      <nav className="glass-nav border-b border-slate-200">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-6 md:px-8 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Logo MAPA */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
             <div className="relative">
               <img 
                 src="/img/logo.jpeg" 
                 alt="Logo MAPA Atlanta-USA" 
-                className="w-12 h-12 rounded-xl object-contain bg-white p-1 border border-blue-200 shadow-md group-hover:scale-105 transition-transform duration-300" 
+                className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl object-contain bg-white p-0.5 border border-slate-200 shadow-xs group-hover:scale-105 transition-transform duration-300" 
               />
-              <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border border-white"></span>
+              <span className="absolute -bottom-0.5 -right-0.5 flex h-3 w-3">
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-white"></span>
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-black font-heading tracking-tight text-[#0F172A] group-hover:text-[#0F62FE] transition-colors">
-                Zezepagnon <span className="text-[#0F62FE] font-medium text-lg font-sans">Bénin</span>
+              <span className="text-lg sm:text-2xl font-black font-heading tracking-tight text-slate-900 group-hover:text-[#059669] transition-colors leading-none">
+                Zezepagnon <span className="text-[#059669] font-semibold text-sm sm:text-lg font-sans">Bénin</span>
               </span>
-              <span className="text-[10px] text-[#004CCD] font-extrabold tracking-widest uppercase -mt-1 flex items-center gap-1">
-                <span>STOCKISTE AGRÉÉ MAPA ATLANTA-USA</span>
+              <span className="text-[9px] sm:text-[10px] text-[#047857] font-bold tracking-wider uppercase mt-0.5 truncate max-w-[170px] sm:max-w-none">
+                STOCKISTE AGRÉÉ MAPA ATLANTA-USA
               </span>
             </div>
           </Link>

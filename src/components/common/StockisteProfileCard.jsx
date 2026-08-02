@@ -1,123 +1,116 @@
 import React from 'react';
 import { ShieldCheck, Award, Phone, Mail, MapPin, CheckCircle2, MessageCircle } from 'lucide-react';
+import { STOCKISTES } from '../../data/stockistes';
 
 export const StockisteProfileCard = () => {
-  const WHATSAPP_LINK = "https://wa.me/22956549884?text=" + encodeURIComponent("Bonjour M. OLATOUNDJI Ilarion BIAOU, je souhaite me renseigner / commander le traitement Zezepagnon.");
-
   return (
-    <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F62FE]/30 border border-blue-500/30 text-white p-8 md:p-12">
-      {/* Motion ambient glowing background accents */}
-      <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#0F62FE]/25 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
-      <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#10B981]/20 rounded-full blur-3xl pointer-events-none animate-pulse-medium"></div>
+    <div className="space-y-8 my-8">
+      {/* Section Header */}
+      <div className="text-center max-w-2xl mx-auto space-y-2">
+        <span className="text-xs font-bold text-[#059669] uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full">
+          REPRÉSENTATION OFFICIELLE BÉNIN
+        </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900">
+          Nos Stockistes Agréés MAPA au Bénin
+        </h2>
+        <p className="text-sm text-slate-600">
+          Trouvez l'interlocuteur officiel le plus proche de votre région pour vos commandes et suivis cliniques.
+        </p>
+      </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
-        {/* Left Column: Styled Photo of M. OLATOUNDJI Ilarion BIAOU */}
-        <div className="lg:col-span-5 flex flex-col items-center">
-          <div className="relative group">
-            {/* Glowing gradient ring around photo */}
-            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-[#0F62FE] via-[#10B981] to-[#6366F1] blur-md opacity-80 group-hover:opacity-100 transition-opacity animate-pulse-medium"></div>
-            
-            {/* Photo frame */}
-            <div className="relative w-64 h-72 md:w-72 md:h-80 rounded-2xl overflow-hidden border-2 border-white/20 bg-slate-900 shadow-2xl">
-              <img 
-                src="/img/img/bi.png" 
-                alt="OLATOUNDJI Ilarion BIAOU - Ambassadeur du Zezepagnon au Bénin" 
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-3 left-3 right-3 text-center">
-                <span className="inline-block bg-[#10B981] text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-lg">
-                  STOCKISTE CERTIFIÉ MAPA
+      {/* Stockistes Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {STOCKISTES.map((stockiste, idx) => (
+          <div
+            key={stockiste.id}
+            className="rounded-3xl bg-slate-900 border border-slate-800 text-white p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden"
+          >
+            {/* Ambient Background subtle accent */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#059669]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div className="relative z-10 space-y-6">
+              {/* Badge & Order indicator */}
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold text-amber-300 bg-amber-950/80 border border-amber-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+                  <Award size={13} className="text-amber-400" />
+                  {idx === 0 ? 'Premier Stockiste Bénin' : 'Second Stockiste Bénin'}
+                </span>
+                <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-3 py-1 rounded-full">
+                  {stockiste.city}
                 </span>
               </div>
-            </div>
-          </div>
 
-          {/* Quick status badge */}
-          <div className="mt-4 flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2 rounded-full text-xs font-semibold text-blue-100">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping"></span>
-            <span>Ambassadeur Bénin depuis 2023</span>
-          </div>
-        </div>
+              {/* Photo & Profile info */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                <div className="relative shrink-0">
+                  <img
+                    src={stockiste.image}
+                    alt={stockiste.name}
+                    className="w-32 h-36 sm:w-36 sm:h-40 object-cover object-top rounded-2xl border-2 border-emerald-500/40 shadow-lg bg-slate-950"
+                  />
+                  <span className="absolute -bottom-2 right-2 bg-[#059669] text-white p-1 rounded-full border-2 border-slate-900">
+                    <ShieldCheck size={14} />
+                  </span>
+                </div>
 
-        {/* Right Column: Bio & Information */}
-        <div className="lg:col-span-7 space-y-6 text-left">
-          
-          <div className="space-y-2">
-            <div className="inline-flex items-center space-x-2 bg-[#0F62FE]/20 border border-[#0F62FE]/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#7FFABA] uppercase tracking-wider">
-              <Award size={16} className="text-[#FBBF24]" />
-              <span>REPRÉSENTATION OFFICIELLE BÉNIN</span>
-            </div>
-            
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              OLATOUNDJI Ilarion BIAOU
-            </h2>
-            <p className="text-sm sm:text-base font-bold text-[#7FFABA] flex items-center gap-2">
-              <ShieldCheck size={18} className="text-[#10B981]" />
-              Ambassadeur du Zezepagnon au Bénin & Stockiste Agréé MAPA
-            </p>
-          </div>
+                <div className="space-y-2 text-center sm:text-left">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
+                    {stockiste.name}
+                  </h3>
+                  <p className="text-xs font-bold text-emerald-400">
+                    {stockiste.title}
+                  </p>
+                  <p className="text-xs text-slate-300 leading-relaxed font-sans">
+                    {stockiste.bio}
+                  </p>
+                </div>
+              </div>
 
-          {/* Description text extracted from official letter */}
-          <p className="text-sm md:text-base text-blue-100/90 leading-relaxed font-sans">
-            Ambassadeur certifié du Zezepagnon en République du Bénin depuis 2023, <strong>M. OLATOUNDJI Ilarion BIAOU</strong> assure la représentation officielle et la distribution sécurisée des traitements d'immunothérapie créés par Son Excellence le <strong>Pr. Alain TAGRO</strong> (Université de Chicago & Miami, USA) et le <strong>Pr. Richard SAWADOGO</strong>.
-          </p>
+              {/* Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200 pt-2 border-t border-slate-800">
+                {stockiste.highlights.map((h, i) => (
+                  <div key={i} className="flex items-center space-x-2 bg-slate-800/60 p-2 rounded-xl border border-slate-700/50">
+                    <CheckCircle2 size={14} className="text-[#059669] shrink-0" />
+                    <span className="font-medium text-[11px]">{h}</span>
+                  </div>
+                ))}
+              </div>
 
-          {/* Key Facts list */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200">
-            <div className="flex items-center space-x-2.5 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 size={16} className="text-[#10B981] shrink-0" />
-              <span>Partenaire Agréé & Certifié MAPA</span>
-            </div>
-            <div className="flex items-center space-x-2.5 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 size={16} className="text-[#10B981] shrink-0" />
-              <span>Interlocuteur Direct Santé Bénin</span>
-            </div>
-            <div className="flex items-center space-x-2.5 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 size={16} className="text-[#10B981] shrink-0" />
-              <span>Suivi Personnalisé des Traitements</span>
-            </div>
-            <div className="flex items-center space-x-2.5 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 size={16} className="text-[#10B981] shrink-0" />
-              <span>Livraison Sécurisée Calavi & Cotonou</span>
-            </div>
-          </div>
-
-          {/* Contact coordinates */}
-          <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-            <div className="flex items-center space-x-3 bg-white/10 p-3.5 rounded-xl border border-white/15">
-              <MapPin size={18} className="text-[#10B981]" />
-              <div>
-                <span className="block font-bold text-white">Siège Stockiste</span>
-                <span className="text-slate-300">Calavi / Togoudo & Cotonou</span>
+              {/* Contacts list */}
+              <div className="space-y-2 pt-2">
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                  Contacts & Téléphones :
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {stockiste.phones.map((p, i) => (
+                    <a
+                      key={i}
+                      href={`tel:${p.cleanNumber}`}
+                      className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-2 rounded-xl text-xs text-white transition-colors"
+                    >
+                      <Phone size={13} className="text-[#059669] shrink-0" />
+                      <span className="font-bold truncate">{p.number}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 bg-white/10 p-3.5 rounded-xl border border-white/15">
-              <Mail size={18} className="text-[#0F62FE]" />
-              <div>
-                <span className="block font-bold text-white">Email Direct</span>
-                <span className="text-slate-300">biaouilarion@gmail.com</span>
-              </div>
+            {/* Direct WhatsApp CTA Button */}
+            <div className="pt-6 relative z-10">
+              <a
+                href={`https://wa.me/${stockiste.phones[0].cleanNumber}?text=${encodeURIComponent(`Bonjour ${stockiste.name}, je souhaite me renseigner / commander le traitement Zezepagnon.`)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3 px-4 rounded-2xl shadow-lg transition-all text-xs sm:text-sm"
+              >
+                <MessageCircle size={18} />
+                <span>Contacter {stockiste.name.split(' ')[0]} {stockiste.name.split(' ')[1] || ''} sur WhatsApp</span>
+              </a>
             </div>
+
           </div>
-
-          {/* Direct Action Button */}
-          <div className="pt-2">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#10B981] hover:to-[#0F62FE] text-white font-bold px-7 py-3.5 rounded-2xl shadow-xl shadow-[#25D366]/25 transition-all text-sm group"
-            >
-              <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
-              <span>Contacter l'Ambassadeur M. BIAOU (+229 56 54 98 84)</span>
-            </a>
-          </div>
-
-        </div>
-
+        ))}
       </div>
     </div>
   );

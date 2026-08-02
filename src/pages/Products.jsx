@@ -28,30 +28,30 @@ export const Products = () => {
       <Breadcrumbs items={[{ name: 'Produits Zezepagnon' }]} />
 
       <section className="max-w-[1440px] mx-auto px-4 md:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-xs font-bold text-[#0F62FE] uppercase tracking-wider bg-blue-50 px-3.5 py-1.5 rounded-full">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <span className="text-xs font-bold text-[#059669] uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full">
             DISTRIBUTION NATIONALE BÉNIN
           </span>
-          <h1 className="text-4xl font-extrabold text-gray-900 mt-3 mb-3">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3 leading-tight break-words">
             Catalogue des Formules Zezepagnon
           </h1>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-slate-700 font-medium">
             Sélectionnez la formule d'immunothérapie adaptée à votre situation clinique.
           </p>
         </div>
 
         {/* Filter and Search Bar */}
-        <div className="glass-card rounded-2xl p-4 mb-8 bg-white border border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="glass-card rounded-2xl p-4 mb-8 bg-white border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Search Input */}
           <div className="relative w-full md:w-80">
-            <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
               placeholder="Rechercher une formule..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#0F62FE] focus:bg-white"
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-[#059669] focus:bg-white text-slate-900"
             />
           </div>
 
@@ -63,8 +63,8 @@ export const Products = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#0F62FE] text-white shadow-md'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-[#059669] text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 {cat}
@@ -74,11 +74,11 @@ export const Products = () => {
 
           {/* Sort Dropdown */}
           <div className="flex items-center space-x-2 w-full md:w-auto justify-end">
-            <SlidersHorizontal size={16} className="text-gray-500" />
+            <SlidersHorizontal size={16} className="text-slate-500" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-gray-50 border border-gray-200 text-xs font-medium text-gray-700 py-2.5 px-3 rounded-xl focus:outline-none focus:border-[#0F62FE]"
+              className="bg-slate-50 border border-slate-200 text-xs font-bold text-slate-800 py-2.5 px-3 rounded-xl focus:outline-none focus:border-[#059669]"
             >
               <option value="popular">Recommandés</option>
               <option value="price-asc">Prix : Croissant</option>
